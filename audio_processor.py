@@ -22,9 +22,9 @@ class PianoAudioProcessor:
         delta_chroma = librosa.feature.delta(chroma_cqt)
 
         # Additional features
-        mfcc = librosa.feature.mfcc(signal, sr=sr, n_mfcc=13)
-        chroma_stft = librosa.feature.chroma_stft(signal, sr=sr)
-        chroma_cens = librosa.feature.chroma_cens(signal, sr=sr)
+        mfcc = librosa.feature.mfcc(y=signal, sr=sr, n_mfcc=13)
+        chroma_stft = librosa.feature.chroma_stft(y=signal, sr=sr)
+        chroma_cens = librosa.feature.chroma_cens(y=signal, sr=sr)
         tonnetz = librosa.feature.tonnetz(y=librosa.effects.harmonic(signal), sr=sr)
 
         spectral_centroid = librosa.feature.spectral_centroid(y=signal, sr=sr)

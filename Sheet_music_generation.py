@@ -19,8 +19,3 @@ def create_sheet_music(note_events, output_path='transcription.pdf'):
     # Export the stream to a MIDI file first
     midi_path = output_path.replace('.pdf', '.mid')
     s.write('midi', fp=midi_path)
-    
-    # Use external software like MuseScore to convert MIDI to PDF, or manually import the MIDI to a notation software and export as PDF
-
-# Example note_events format: [(start_time1, end_time1, pitch1), (start_time2, end_time2, pitch2), ...]
-# note_events should be populated based on the thresholded model output
