@@ -1,36 +1,16 @@
+# window.py
 import sys
-from PySide6.QtWidgets import (QApplication, QMainWindow, QPushButton, QTextEdit, QVBoxLayout, QWidget,
-                               QFileDialog, QProgressBar, QHBoxLayout, QGroupBox)
-from PySide6.QtCore import QThread, QObject, Signal
+from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton, QTextEdit, QVBoxLayout, QWidget, QFileDialog, QProgressBar, QHBoxLayout, QGroupBox
+from PySide6.QtCore import QThread
 from PySide6.QtGui import QIcon
-import numpy as np
-from audio_processor import PianoAudioProcessor
-
-class AudioProcessingWorker(QObject):
-    finished = Signal()
-    progress = Signal(int)
-    features_extracted = Signal(dict)
-
-    def __init__(self, fileName, pianoAudioProcessor):
-        super().__init__()
-        self.fileName = fileName
-        self.pianoAudioProcessor = pianoAudioProcessor
-
-    def run(self):
-        signal, sr = self.pianoAudioProcessor.load_audio(self.fileName)
-        self.progress.emit(20)  # Emulate progress update
-        features = self.pianoAudioProcessor.extract_features(signal, sr)
-        self.progress.emit(100)  # Signal completion
-        self.features_extracted.emit(features)
-        self.finished.emit()
+from transcription_worker import TranscriptionWorker
 
 class SoundToNotesApp(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('Sound to Notes Transcription')
         self.setGeometry(100, 100, 800, 600)
-        self.setWindowIcon(QIcon('icon_path_here.png'))  # Update with the correct path to your icon
-        self.pianoAudioProcessor = PianoAudioProcessor()
+        self.setWindowIcon(QIcon('path/to/your/icon.png'))  # Update this path to your application's icon
         self.initUI()
 
     def initUI(self):
@@ -38,11 +18,9 @@ class SoundToNotesApp(QMainWindow):
         self.setCentralWidget(centralWidget)
         mainLayout = QVBoxLayout(centralWidget)
 
-        # Progress Bar
         self.progressBar = QProgressBar()
         mainLayout.addWidget(self.progressBar)
 
-        # Upload Audio Group
         uploadGroupBox = QGroupBox("Upload Audio")
         uploadLayout = QHBoxLayout()
         self.uploadButton = QPushButton('Upload')
@@ -51,7 +29,6 @@ class SoundToNotesApp(QMainWindow):
         uploadGroupBox.setLayout(uploadLayout)
         mainLayout.addWidget(uploadGroupBox)
 
-        # Transcription Display Group
         transcriptionGroupBox = QGroupBox("Transcription")
         transcriptionLayout = QVBoxLayout()
         self.transcriptionDisplay = QTextEdit()
@@ -60,15 +37,16 @@ class SoundToNotesApp(QMainWindow):
         transcriptionGroupBox.setLayout(transcriptionLayout)
         mainLayout.addWidget(transcriptionGroupBox)
 
-        # Controls Group
         controlsGroupBox = QGroupBox("Controls")
         controlsLayout = QHBoxLayout()
         self.playButton = QPushButton('Play')
-        self.playButton.clicked.connect(self.playAudio)  # Implement this method
+        # Placeholder - Implement actual audio playback functionality
+        self.playButton.clicked.connect(lambda: print("Play button clicked"))
         controlsLayout.addWidget(self.playButton)
 
         self.saveButton = QPushButton('Save')
-        self.saveButton.clicked.connect(self.saveTranscription)  # Implement this method
+        # Placeholder - Implement actual functionality to save transcription results
+        self.saveButton.clicked.connect(lambda: print("Save button clicked"))
         controlsLayout.addWidget(self.saveButton)
         controlsGroupBox.setLayout(controlsLayout)
         mainLayout.addWidget(controlsGroupBox)
@@ -113,43 +91,21 @@ class SoundToNotesApp(QMainWindow):
         if fileName:
             self.processFileInThread(fileName)
 
+
     def processFileInThread(self, fileName):
+        self.progressBar.setRange(0, 0)  # Indeterminate progress
         self.thread = QThread()
-        self.worker = AudioProcessingWorker(fileName, self.pianoAudioProcessor)
+        # Specify the model_type here, adjust according to your model
+        model_type = "Note_pedal"
+        checkpoint_path = "./best_model.pth"
+        self.worker = TranscriptionWorker(fileName, model_type, checkpoint_path)
         self.worker.moveToThread(self.thread)
-        self.thread.started.connect(self.worker.run)
         self.worker.finished.connect(self.thread.quit)
-        self.worker.finished.connect(self.worker.deleteLater)
-        self.thread.finished.connect(self.thread.deleteLater)
-        self.worker.progress.connect(self.progressBar.setValue)
-        self.worker.features_extracted.connect(self.display_feature_summary)
+        self.worker.transcription_result.connect(self.displayTranscriptionResult)
+        self.thread.started.connect(self.worker.run)
         self.thread.start()
 
-    def display_feature_summary(self, features):
-        feature_summary = "Extracted Features Summary:\n"
-        for name, feature in features.items():
-            feature_summary += f"{name}: shape {str(feature.shape)}\n"
-        self.transcriptionDisplay.setPlainText(feature_summary)
-        self.progressBar.setValue(0)  # Reset progress bar
-    
-    def prepare_features_for_model(features):
-        # Flatten the features that have more than one dimension
-        flattened_features = [features[key].flatten() for key in features if len(features[key].shape) > 1]
-        feature_vector = np.concatenate(flattened_features)
-        feature_vector = (feature_vector - feature_vector.mean()) / feature_vector.std()
-        return feature_vector
 
-
-    # Implement the playAudio method
-    def playAudio(self):
-        print("Playing audio...")  # Placeholder for actual audio playback functionality
-
-    # Implement the saveTranscription method
-    def saveTranscription(self):
-        print("Saving transcription...")  # Placeholder for actual save functionality
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    mainWindow = SoundToNotesApp()
-    mainWindow.show()
-    sys.exit(app.exec())
+    def displayTranscriptionResult(self, midi_path):
+        self.progressBar.setRange(0, 1)  # Reset progress bar to default
+        self.transcriptionDisplay.setPlainText(f"Transcription completed. MIDI file saved to: {midi_path}")
