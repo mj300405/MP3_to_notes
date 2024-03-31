@@ -31,6 +31,10 @@ class TranscriptionWorker(QObject):
         # Call the transcribe method with the loaded audio and MIDI path
         transcribed_dict = transcriptor.transcribe(audio=audio, midi_path=midi_path)
 
+        # generate PDF directly from transcribed data
+        pdf_path = self.audio_path.replace('.wav', '.pdf').replace('.mp3', '.pdf')
+        generate_sheet_music_pdf(transcribed_dict, pdf_path)
+
         # Emit the transcription result with the path to the generated MIDI file
-        self.transcription_result.emit(midi_path)
+        self.transcription_result.emit(pdf_path)
         self.finished.emit()

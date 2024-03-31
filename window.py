@@ -97,7 +97,7 @@ class SoundToNotesApp(QMainWindow):
         self.thread = QThread()
         # Specify the model_type here, adjust according to your model
         model_type = "Note_pedal"
-        checkpoint_path = "./best_model.pth"
+        checkpoint_path = "best_model.pth"
         self.worker = TranscriptionWorker(fileName, model_type, checkpoint_path)
         self.worker.moveToThread(self.thread)
         self.worker.finished.connect(self.thread.quit)
