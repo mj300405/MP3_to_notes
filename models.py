@@ -349,9 +349,9 @@ class Note_pedal(nn.Module):
 
     def forward(self, input):
         note_output_dict = self.note_model(input)
-        pedal_output_dict = self.pedal_model(input)
+        #pedal_output_dict = self.pedal_model(input)
 
         full_output_dict = {}
         full_output_dict.update(note_output_dict)
-        full_output_dict.update(pedal_output_dict)
+        #full_output_dict.update(pedal_output_dict)
         return full_output_dict

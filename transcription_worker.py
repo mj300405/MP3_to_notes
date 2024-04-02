@@ -4,6 +4,7 @@ import torch
 # Ensure these imports point to the correct locations in your project
 from inference import PianoTranscription
 import librosa
+from generate_pdf import convert_midi_to_pdf
 
 class TranscriptionWorker(QObject):
     finished = Signal()
@@ -33,7 +34,7 @@ class TranscriptionWorker(QObject):
 
         # generate PDF directly from transcribed data
         pdf_path = self.audio_path.replace('.wav', '.pdf').replace('.mp3', '.pdf')
-        generate_sheet_music_pdf(transcribed_dict, pdf_path)
+        convert_midi_to_pdf(midi_path, pdf_path)
 
         # Emit the transcription result with the path to the generated MIDI file
         self.transcription_result.emit(pdf_path)
