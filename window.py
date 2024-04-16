@@ -153,7 +153,7 @@ class SoundToNotesApp(QMainWindow):
         super().__init__()
         self.setWindowTitle('Sound to Notes Transcription')
         self.setGeometry(100, 100, 800, 600)
-        self.setWindowIcon(QIcon('path/to/favicon.ico'))  # Ensure this path is correct
+        self.setWindowIcon(QIcon('adds/favicon.ico'))  # Ensure this path is correct
         self.initUI()
         self.temp_files = []  # List to manage temporary files
 
@@ -227,17 +227,29 @@ class SoundToNotesApp(QMainWindow):
         if hasattr(self, 'uploadedFileName'):
             self.processFileInThread(self.uploadedFileName)
 
+    # def saveMidi(self):
+    #     # Ensure that the worker has an attribute for the MIDI path and the file exists.
+    #     if hasattr(self.worker, 'temp_midi_path') and os.path.isfile(self.worker.temp_midi_path):
+    #         midi_path, _ = QFileDialog.getSaveFileName(self, "Save MIDI File", "", "MIDI files (*.mid)")
+    #         if midi_path:  # Only proceed if the user selects a file path.
+    #             shutil.copy(self.worker.temp_midi_path, midi_path)
+    #             self.transcriptionDisplay.setPlainText(f"MIDI file saved to: {midi_path}")
+    #             # Clean up the temporary file if no longer needed
+    #             if self.worker.temp_midi_path in self.temp_files:
+    #                 self.temp_files.remove(self.worker.temp_midi_path)
+    #                 os.remove(self.worker.temp_midi_path)
+    #     else:
+    #         self.transcriptionDisplay.setPlainText("No MIDI file to save.")
+
     def saveMidi(self):
-        # Ensure that the worker has an attribute for the MIDI path and the file exists.
+        print("Attempting to save MIDI with path:", getattr(self.worker, 'temp_midi_path', 'No path attribute found'))  # Debug
         if hasattr(self.worker, 'temp_midi_path') and os.path.isfile(self.worker.temp_midi_path):
             midi_path, _ = QFileDialog.getSaveFileName(self, "Save MIDI File", "", "MIDI files (*.mid)")
-            if midi_path:  # Only proceed if the user selects a file path.
+            if midi_path:
                 shutil.copy(self.worker.temp_midi_path, midi_path)
                 self.transcriptionDisplay.setPlainText(f"MIDI file saved to: {midi_path}")
-                # Clean up the temporary file if no longer needed
-                if self.worker.temp_midi_path in self.temp_files:
-                    self.temp_files.remove(self.worker.temp_midi_path)
-                    os.remove(self.worker.temp_midi_path)
+            else:
+                print("MIDI save dialog canceled.")  # Debug
         else:
             self.transcriptionDisplay.setPlainText("No MIDI file to save.")
 
@@ -257,18 +269,34 @@ class SoundToNotesApp(QMainWindow):
             self.transcriptionDisplay.setPlainText("No PDF file to save.")
 
 
+    # def processFileInThread(self, fileName):
+    #     self.progressBar.setRange(0, 0)
+    #     self.thread = QThread()
+    #     # Create temporary paths for MIDI and PDF files using tempfile
+    #     temp_midi_path = tempfile.NamedTemporaryFile(delete=False, suffix=".mid").name
+    #     temp_pdf_path = tempfile.NamedTemporaryFile(delete=False, suffix=".pdf").name
+        
+    #     # Add these paths to the list to manage their lifecycle
+    #     self.temp_files.append(temp_midi_path)
+    #     self.temp_files.append(temp_pdf_path)
+        
+    #     # Initialize the worker with these temporary paths
+    #     self.worker = TranscriptionWorker(fileName, "Note_pedal", "checkpoints/best_model_2.pth",
+    #                                     temp_midi_path, temp_pdf_path, self.display_pdf_from_path)
+    #     self.worker.moveToThread(self.thread)
+    #     self.worker.finished.connect(self.thread.quit)
+    #     self.worker.transcription_result.connect(self.displayTranscriptionResult)
+    #     self.thread.started.connect(self.worker.run)
+    #     self.thread.start()
+
     def processFileInThread(self, fileName):
         self.progressBar.setRange(0, 0)
         self.thread = QThread()
-        # Create temporary paths for MIDI and PDF files using tempfile
+
         temp_midi_path = tempfile.NamedTemporaryFile(delete=False, suffix=".mid").name
         temp_pdf_path = tempfile.NamedTemporaryFile(delete=False, suffix=".pdf").name
-        
-        # Add these paths to the list to manage their lifecycle
-        self.temp_files.append(temp_midi_path)
-        self.temp_files.append(temp_pdf_path)
-        
-        # Initialize the worker with these temporary paths
+        print("Temporary MIDI path in processFileInThread:", temp_midi_path)  # Debug
+
         self.worker = TranscriptionWorker(fileName, "Note_pedal", "checkpoints/best_model_2.pth",
                                         temp_midi_path, temp_pdf_path, self.display_pdf_from_path)
         self.worker.moveToThread(self.thread)
@@ -276,6 +304,9 @@ class SoundToNotesApp(QMainWindow):
         self.worker.transcription_result.connect(self.displayTranscriptionResult)
         self.thread.started.connect(self.worker.run)
         self.thread.start()
+
+
+
 
     def displayTranscriptionResult(self, midi_path, pdf_path):
         # Display results and manage temporary files...
