@@ -5,50 +5,6 @@ import os
 import time
 
 
-# def convert_midi_to_pdf(midi_data, pdf_file_path):
-#     # Adjust the path to the MuseScore executable as per your MuseScore installation
-#     musescore_executable = "C:\\Program Files\\MuseScore 4\\bin\\MuseScore4.exe"
-
-#     # Create a temporary MIDI fileś
-#     with tempfile.NamedTemporaryFile(delete=False, suffix=".mid") as tmp_midi:
-#         midi_file_path = tmp_midi.name
-#         tmp_midi.write(midi_data)
-#         tmp_midi.close()
-
-#         # Ensure the executable path and arguments are correctly specified
-#         command = [musescore_executable, midi_file_path, '-o', pdf_file_path]
-
-#         try:
-#             subprocess.run(command, check=True)
-#             print(f"PDF successfully generated at: {pdf_file_path}")
-#         except subprocess.CalledProcessError as e:
-#             print(f"Failed to convert MIDI to PDF: {e}")
-#         finally:
-#             # Remove the temporary MIDI file
-#             if os.path.exists(midi_file_path):
-#                 os.remove(midi_file_path)
-
-# def convert_midi_to_pdf(midi_data, pdf_file_path):
-#     musescore_executable = "C:\\Program Files\\MuseScore 4\\bin\\MuseScore4.exe"
-    
-#     # Create a temporary MIDI file
-#     with tempfile.NamedTemporaryFile(delete=False, suffix=".mid") as tmp_midi:
-#         midi_file_path = tmp_midi.name
-#         tmp_midi.write(midi_data)
-#         tmp_midi.flush()
-
-#     # Command to convert MIDI to PDF
-#     command = [musescore_executable, midi_file_path, '-o', pdf_file_path]
-#     try:
-#         process = subprocess.run(command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-#         print(f"PDF successfully generated at: {pdf_file_path}")
-#     except subprocess.CalledProcessError as e:
-#         print(f"Failed to convert MIDI to PDF: {e.stdout.decode()} {e.stderr.decode()}")
-#     finally:
-#         # Close any handles explicitly if needed
-#         # Wait and then remove the file
-#         os.unlink(midi_file_path)
-
 def convert_midi_to_pdf(midi_data, pdf_file_path):
     musescore_executable = "C:\\Program Files\\MuseScore 4\\bin\\MuseScore4.exe"
     
