@@ -71,6 +71,42 @@ class SoundToNotesApp(QMainWindow):
         controlsGroupBox.setLayout(controlsLayout)
         mainLayout.addWidget(controlsGroupBox)
 
+        self.applyStylesheet()
+
+
+    def applyStylesheet(self):
+        self.setStyleSheet("""
+            QGroupBox {
+                font: bold;
+                border: 1px solid silver;
+                border-radius: 6px;
+                margin-top: 20px;
+            }
+            QGroupBox:title {
+                subcontrol-origin: margin;
+                left: 7px;
+                padding: 5px 10px 5px 10px;
+            }
+            QPushButton {
+                background-color: #A3C1DA;
+                border-style: outset;
+                border-width: 2px;
+                border-radius: 10px;
+                border-color: beige;
+                font: bold 12px;
+                min-width: 10em;
+                padding: 6px;
+            }
+            QPushButton:hover {
+                background-color: #6698FF;
+                border-style: inset;
+            }
+            QTextEdit {
+                font: 12px;
+                border: 1px solid #A3C1DA;
+            }
+        """)
+
 
     def uploadFile(self):
         fileName, _ = QFileDialog.getOpenFileName(self, "Open Audio File", "", "Audio Files (*.mp3 *.wav)")
