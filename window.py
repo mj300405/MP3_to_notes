@@ -204,7 +204,7 @@ class SoundToNotesApp(QMainWindow):
             print(f"Error displaying PDF: {e}")
 
     def closeEvent(self, event):
-        # Cleanup temporary files on application close...
+        # Cleanup temporary files on application close
         for file_path in self.temp_files:
             if os.path.exists(file_path):
                 os.remove(file_path)

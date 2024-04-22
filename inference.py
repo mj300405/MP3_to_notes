@@ -51,6 +51,10 @@ class PianoTranscription(object):
         self.model = Model(frames_per_second=self.frames_per_second, 
             classes_num=self.classes_num)
 
+        # check if checkpoint exists
+        if not os.path.exists(checkpoint_path):
+            raise Exception(f"Checkpoint file not found at {checkpoint_path}")
+
         # Load model
         checkpoint = torch.load(checkpoint_path, map_location=self.device)
         self.model.load_state_dict(checkpoint['model'], strict=False)
