@@ -6,8 +6,9 @@ import time
 
 
 def convert_midi_to_pdf(midi_data, pdf_file_path):
-    musescore_executable = "C:\\Program Files\\MuseScore 4\\bin\\MuseScore4.exe"
-    
+    #musescore_executable = "C:\\Program Files\\MuseScore 4\\bin\\MuseScore4.exe"
+    musescore_executable = "/usr/bin/musescore"
+
     with tempfile.NamedTemporaryFile(delete=False, suffix=".mid") as tmp_midi:
         midi_file_path = tmp_midi.name
         tmp_midi.write(midi_data)

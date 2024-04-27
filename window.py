@@ -151,6 +151,21 @@ class SoundToNotesApp(QMainWindow):
             self.transcriptionDisplay.setPlainText("No PDF file to save.")
 
 
+    # def processFileInThread(self, fileName):
+    #     self.progressBar.setRange(0, 0)
+    #     self.thread = QThread()
+
+    #     temp_midi_path = tempfile.NamedTemporaryFile(delete=False, suffix=".mid").name
+    #     temp_pdf_path = tempfile.NamedTemporaryFile(delete=False, suffix=".pdf").name
+    #     print("Temporary MIDI path in processFileInThread:", temp_midi_path)  # Debug
+
+    #     self.worker = TranscriptionWorker(fileName, "Note_pedal", "checkpoints/best_model_2.pth",
+    #                                     temp_midi_path, temp_pdf_path, self.display_pdf_from_path)
+    #     self.worker.moveToThread(self.thread)
+    #     self.worker.finished.connect(self.thread.quit)
+    #     self.worker.transcription_result.connect(self.displayTranscriptionResult)
+    #     self.thread.started.connect(self.worker.run)
+    #     self.thread.start()
     def processFileInThread(self, fileName):
         self.progressBar.setRange(0, 0)
         self.thread = QThread()
@@ -159,15 +174,16 @@ class SoundToNotesApp(QMainWindow):
         temp_pdf_path = tempfile.NamedTemporaryFile(delete=False, suffix=".pdf").name
         print("Temporary MIDI path in processFileInThread:", temp_midi_path)  # Debug
 
-        self.worker = TranscriptionWorker(fileName, "Note_pedal", "checkpoints/best_model_2.pth",
-                                        temp_midi_path, temp_pdf_path, self.display_pdf_from_path)
+        # Update TranscriptionWorker initialization to match the new constructor
+        self.worker = TranscriptionWorker(audio_path=fileName,
+                                        device='cpu',  # Assuming 'cpu' use, adjust as necessary
+                                        display_callback=self.display_pdf_from_path)
+
         self.worker.moveToThread(self.thread)
         self.worker.finished.connect(self.thread.quit)
         self.worker.transcription_result.connect(self.displayTranscriptionResult)
         self.thread.started.connect(self.worker.run)
         self.thread.start()
-
-
 
 
     def displayTranscriptionResult(self, midi_path, pdf_path):
