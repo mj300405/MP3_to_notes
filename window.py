@@ -1,6 +1,6 @@
 import sys
 import fitz  # PyMuPDF
-from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton, QTextEdit, QVBoxLayout, QWidget, QFileDialog, QProgressBar, QHBoxLayout, QGroupBox, QLabel
+from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton, QTextEdit, QVBoxLayout, QWidget, QFileDialog, QProgressBar, QHBoxLayout, QGroupBox, QLabel, QScrollArea, QSizePolicy
 from PySide6.QtCore import QThread, Qt
 from PySide6.QtGui import QIcon, QPixmap, QImage
 from transcription_worker import TranscriptionWorker
@@ -16,6 +16,7 @@ class SoundToNotesApp(QMainWindow):
         self.setWindowIcon(QIcon('adds/favicon.ico'))  # Ensure this path is correct
         self.initUI()
         self.temp_files = []  # List to manage temporary files
+        self.current_pdf_path = None  # Store the current PDF path
 
     def initUI(self):
         centralWidget = QWidget()
@@ -38,12 +39,20 @@ class SoundToNotesApp(QMainWindow):
         transcriptionGroupBox = QGroupBox("Transcription")
         transcriptionLayout = QVBoxLayout()
         self.transcriptionDisplay = QTextEdit()
-        self.transcriptionDisplay.setPlaceholderText('Transcribed notes will be displayed here...')
+        self.transcriptionDisplay.setPlaceholderText('Saved file path will be displayed here...')
+        self.transcriptionDisplay.setMaximumHeight(50)
         transcriptionLayout.addWidget(self.transcriptionDisplay)
+        
+        # PDF Display Section with Scroll Area
+        self.scrollArea = QScrollArea()
+        self.scrollArea.setWidgetResizable(True)  # Allows the contained widget to resize freely
+        self.scrollArea.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)  # May need to import QSizePolicy
         self.pdfDisplayLabel = QLabel("PDF preview will appear here")
         self.pdfDisplayLabel.setAlignment(Qt.AlignCenter)
-        self.pdfDisplayLabel.setScaledContents(True)
-        transcriptionLayout.addWidget(self.pdfDisplayLabel)
+        self.pdfDisplayLabel.setScaledContents(False)
+        self.scrollArea.setWidget(self.pdfDisplayLabel)  # Adding the label to the scroll area
+        transcriptionLayout.addWidget(self.scrollArea)  # Adding the scroll area to the layout
+        
         transcriptionGroupBox.setLayout(transcriptionLayout)
         mainLayout.addWidget(transcriptionGroupBox)
 
@@ -72,6 +81,7 @@ class SoundToNotesApp(QMainWindow):
         mainLayout.addWidget(controlsGroupBox)
 
         self.applyStylesheet()
+
 
 
     def applyStylesheet(self):
@@ -151,21 +161,6 @@ class SoundToNotesApp(QMainWindow):
             self.transcriptionDisplay.setPlainText("No PDF file to save.")
 
 
-    # def processFileInThread(self, fileName):
-    #     self.progressBar.setRange(0, 0)
-    #     self.thread = QThread()
-
-    #     temp_midi_path = tempfile.NamedTemporaryFile(delete=False, suffix=".mid").name
-    #     temp_pdf_path = tempfile.NamedTemporaryFile(delete=False, suffix=".pdf").name
-    #     print("Temporary MIDI path in processFileInThread:", temp_midi_path)  # Debug
-
-    #     self.worker = TranscriptionWorker(fileName, "Note_pedal", "checkpoints/best_model_2.pth",
-    #                                     temp_midi_path, temp_pdf_path, self.display_pdf_from_path)
-    #     self.worker.moveToThread(self.thread)
-    #     self.worker.finished.connect(self.thread.quit)
-    #     self.worker.transcription_result.connect(self.displayTranscriptionResult)
-    #     self.thread.started.connect(self.worker.run)
-    #     self.thread.start()
     def processFileInThread(self, fileName):
         self.progressBar.setRange(0, 0)
         self.thread = QThread()
@@ -187,37 +182,65 @@ class SoundToNotesApp(QMainWindow):
 
 
     def displayTranscriptionResult(self, midi_path, pdf_path):
-        # Display results and manage temporary files...
         self.progressBar.setRange(0, 1)
-        message = "Transcription completed."
-        self.transcriptionDisplay.setPlainText(message)
+        self.transcriptionDisplay.setPlainText("Transcription completed.")
         self.saveMidiButton.setEnabled(True)
         self.savePdfButton.setEnabled(True)
         if pdf_path:
-            self.display_pdf_from_path(pdf_path)  # Display the PDF automatically
+            self.current_pdf_path = pdf_path  # Store the current PDF path
+            self.display_pdf_from_path(pdf_path)  # Display the PDF automatically  # Display the PDF automatically
 
+    # def display_pdf_from_path(self, pdf_path):
+    #     try:
+    #         if not os.path.exists(pdf_path):
+    #             raise FileNotFoundError(f"PDF file not found at {pdf_path}")
+
+    #         doc = fitz.open(pdf_path)
+    #         if doc.page_count == 0:
+    #             raise ValueError("PDF document is empty or corrupted")
+
+    #         page = doc[0]
+    #         # Render the page to a higher resolution pixmap before scaling.
+    #         pix = page.get_pixmap(matrix=fitz.Matrix(300 / 72, 300 / 72))
+    #         img = QImage(pix.samples, pix.width, pix.height, QImage.Format_RGB888)
+    #         pixmap = QPixmap.fromImage(img)
+    #         # Scale the pixmap to the QLabel size while preserving the aspect ratio.
+    #         scaled_pixmap = pixmap.scaled(self.pdfDisplayLabel.width(), self.pdfDisplayLabel.height(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
+    #         self.pdfDisplayLabel.setPixmap(scaled_pixmap)
+    #         doc.close()
+    #     except Exception as e:
+    #         print(f"Error displaying PDF: {e}")
     def display_pdf_from_path(self, pdf_path):
-        # Enhanced error handling for displaying PDFs...
         try:
             if not os.path.exists(pdf_path):
                 raise FileNotFoundError(f"PDF file not found at {pdf_path}")
-
-            file_size = os.path.getsize(pdf_path)
-            if file_size == 0:
-                raise ValueError(f"PDF file at {pdf_path} is empty")
-
+            
             doc = fitz.open(pdf_path)
-            if doc.page_count == 0:
-                raise ValueError("PDF document is empty or corrupted")
-
             page = doc[0]
-            pix = page.get_pixmap()
+            pix = page.get_pixmap(matrix=fitz.Matrix(300 / 72, 300 / 72))  # Adjust scale here as necessary
             img = QImage(pix.samples, pix.width, pix.height, QImage.Format_RGB888)
             pixmap = QPixmap.fromImage(img)
-            self.pdfDisplayLabel.setPixmap(pixmap.scaled(self.pdfDisplayLabel.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation))
+            
+            # Use Qt.KeepAspectRatio to maintain aspect ratio
+            scaled_pixmap = pixmap.scaled(self.pdfDisplayLabel.width(), self.pdfDisplayLabel.height(), 
+                                        Qt.KeepAspectRatio, Qt.SmoothTransformation)
+            
+            self.pdfDisplayLabel.setPixmap(scaled_pixmap)
             doc.close()
         except Exception as e:
             print(f"Error displaying PDF: {e}")
+            self.pdfDisplayLabel.clear()
+
+
+
+
+    def resizeEvent(self, event):
+        super(SoundToNotesApp, self).resizeEvent(event)  # Make sure to call the base class method
+        if self.current_pdf_path:
+            self.display_pdf_from_path(self.current_pdf_path)
+
+
+
 
     def closeEvent(self, event):
         # Cleanup temporary files on application close
