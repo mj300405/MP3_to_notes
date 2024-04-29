@@ -7,6 +7,8 @@ from transcription_worker import TranscriptionWorker
 import os
 import shutil
 import tempfile
+import threading
+import vlc
 
 class SoundToNotesApp(QMainWindow):
     def __init__(self):
@@ -17,15 +19,19 @@ class SoundToNotesApp(QMainWindow):
         self.initUI()
         self.temp_files = []  # List to manage temporary files
         self.current_pdf_path = None  # Store the current PDF path
+        self.player = None
 
     def initUI(self):
+        # Set up the central widget and main layout
         centralWidget = QWidget()
         self.setCentralWidget(centralWidget)
         mainLayout = QVBoxLayout(centralWidget)
 
+        # Set up the progress bar
         self.progressBar = QProgressBar()
         mainLayout.addWidget(self.progressBar)
 
+        # Set up the upload group box
         uploadGroupBox = QGroupBox("Upload Audio")
         uploadLayout = QHBoxLayout()
         self.uploadButton = QPushButton('Upload')
@@ -36,26 +42,30 @@ class SoundToNotesApp(QMainWindow):
         uploadGroupBox.setLayout(uploadLayout)
         mainLayout.addWidget(uploadGroupBox)
 
+        # Set up the transcription group box
         transcriptionGroupBox = QGroupBox("Transcription")
         transcriptionLayout = QVBoxLayout()
         self.transcriptionDisplay = QTextEdit()
-        self.transcriptionDisplay.setPlaceholderText('Saved file path will be displayed here...')
         self.transcriptionDisplay.setMaximumHeight(50)
         transcriptionLayout.addWidget(self.transcriptionDisplay)
-        
-        # PDF Display Section with Scroll Area
+
+        # Set up the scroll area
         self.scrollArea = QScrollArea()
-        self.scrollArea.setWidgetResizable(True)  # Allows the contained widget to resize freely
-        self.scrollArea.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)  # May need to import QSizePolicy
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollWidget = QWidget()  # This widget will contain all scrollable content
+        self.scrollLayout = QVBoxLayout(self.scrollWidget)  # Add a layout to the scrollable widget
+        self.scrollArea.setWidget(self.scrollWidget)
+        transcriptionLayout.addWidget(self.scrollArea)
+
+        # Set up the PDF display label within the scroll layout
         self.pdfDisplayLabel = QLabel("PDF preview will appear here")
         self.pdfDisplayLabel.setAlignment(Qt.AlignCenter)
-        self.pdfDisplayLabel.setScaledContents(False)
-        self.scrollArea.setWidget(self.pdfDisplayLabel)  # Adding the label to the scroll area
-        transcriptionLayout.addWidget(self.scrollArea)  # Adding the scroll area to the layout
-        
+        self.scrollLayout.addWidget(self.pdfDisplayLabel)
+
         transcriptionGroupBox.setLayout(transcriptionLayout)
         mainLayout.addWidget(transcriptionGroupBox)
 
+        # Set up the controls group box
         controlsGroupBox = QGroupBox("Controls")
         controlsLayout = QHBoxLayout()
         self.transcribeButton = QPushButton('Transcribe')
@@ -63,15 +73,29 @@ class SoundToNotesApp(QMainWindow):
         self.transcribeButton.setEnabled(False)
         controlsLayout.addWidget(self.transcribeButton)
         
-        self.playButton = QPushButton('Play')
-        self.playButton.clicked.connect(lambda: print("Play button clicked"))
-        controlsLayout.addWidget(self.playButton)
+        self.playMP3Button = QPushButton('Play')
+        self.playMP3Button.clicked.connect(self.playMedia)
+        self.playMP3Button.setEnabled(False)
+        controlsLayout.addWidget(self.playMP3Button)
 
+        self.pauseButton = QPushButton('Pause/Resume')
+        self.pauseButton.clicked.connect(self.togglePause)
+        self.pauseButton.setEnabled(False)
+        controlsLayout.addWidget(self.pauseButton)
+
+        self.stopButton = QPushButton('Stop')
+        self.stopButton.clicked.connect(self.stopMedia)
+        self.stopButton.setEnabled(False)
+        controlsLayout.addWidget(self.stopButton)
+        # Add the Stop button to the layout
+        
+
+        
         self.saveMidiButton = QPushButton('Save MIDI')
         self.saveMidiButton.clicked.connect(self.saveMidi)
         self.saveMidiButton.setEnabled(False)
         controlsLayout.addWidget(self.saveMidiButton)
-
+        
         self.savePdfButton = QPushButton('Save PDF')
         self.savePdfButton.clicked.connect(self.savePdf)
         self.savePdfButton.setEnabled(False)
@@ -80,7 +104,9 @@ class SoundToNotesApp(QMainWindow):
         controlsGroupBox.setLayout(controlsLayout)
         mainLayout.addWidget(controlsGroupBox)
 
+        # Apply any custom stylesheets
         self.applyStylesheet()
+
 
 
 
@@ -126,6 +152,13 @@ class SoundToNotesApp(QMainWindow):
             self.transcribeButton.setEnabled(True)
             self.saveMidiButton.setEnabled(False)
             self.savePdfButton.setEnabled(False)
+            self.playMP3Button.setEnabled(True)
+            self.pauseButton.setEnabled(False)
+            self.stopButton.setEnabled(False)
+        if self.player:
+            self.player.stop()
+            self.player.release()
+        self.player = vlc.MediaPlayer(fileName)
 
 
     def startTranscription(self):
@@ -171,7 +204,7 @@ class SoundToNotesApp(QMainWindow):
 
         # Update TranscriptionWorker initialization to match the new constructor
         self.worker = TranscriptionWorker(audio_path=fileName,
-                                        device='cpu',  # Assuming 'cpu' use, adjust as necessary
+                                        device='cpu',  # Assuming 'cpu' use,
                                         display_callback=self.display_pdf_from_path)
 
         self.worker.moveToThread(self.thread)
@@ -189,27 +222,9 @@ class SoundToNotesApp(QMainWindow):
         if pdf_path:
             self.current_pdf_path = pdf_path  # Store the current PDF path
             self.display_pdf_from_path(pdf_path)  # Display the PDF automatically  # Display the PDF automatically
+            self.playMIDIButton.setEnabled(True)
+            
 
-    # def display_pdf_from_path(self, pdf_path):
-    #     try:
-    #         if not os.path.exists(pdf_path):
-    #             raise FileNotFoundError(f"PDF file not found at {pdf_path}")
-
-    #         doc = fitz.open(pdf_path)
-    #         if doc.page_count == 0:
-    #             raise ValueError("PDF document is empty or corrupted")
-
-    #         page = doc[0]
-    #         # Render the page to a higher resolution pixmap before scaling.
-    #         pix = page.get_pixmap(matrix=fitz.Matrix(300 / 72, 300 / 72))
-    #         img = QImage(pix.samples, pix.width, pix.height, QImage.Format_RGB888)
-    #         pixmap = QPixmap.fromImage(img)
-    #         # Scale the pixmap to the QLabel size while preserving the aspect ratio.
-    #         scaled_pixmap = pixmap.scaled(self.pdfDisplayLabel.width(), self.pdfDisplayLabel.height(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
-    #         self.pdfDisplayLabel.setPixmap(scaled_pixmap)
-    #         doc.close()
-    #     except Exception as e:
-    #         print(f"Error displaying PDF: {e}")
     def display_pdf_from_path(self, pdf_path):
         try:
             if not os.path.exists(pdf_path):
@@ -232,17 +247,36 @@ class SoundToNotesApp(QMainWindow):
             self.pdfDisplayLabel.clear()
 
 
-
-
     def resizeEvent(self, event):
         super(SoundToNotesApp, self).resizeEvent(event)  # Make sure to call the base class method
         if self.current_pdf_path:
             self.display_pdf_from_path(self.current_pdf_path)
 
+    def playMedia(self):
+        if self.player:
+            self.player.play()
+            self.pauseButton.setEnabled(True)
+            self.stopButton.setEnabled(True)
 
+    def togglePause(self):
+        if self.player:
+            if self.player.is_playing():
+                self.player.pause()
+            else:
+                self.player.play()
+
+    def stopMedia(self):
+        if self.player:
+            self.player.stop()
+            self.pauseButton.setEnabled(False)
+            self.stopButton.setEnabled(False)
 
 
     def closeEvent(self, event):
+        if self.player:
+            self.player.stop()
+            self.player.release()
+        super().closeEvent(event)
         # Cleanup temporary files on application close
         for file_path in self.temp_files:
             if os.path.exists(file_path):
