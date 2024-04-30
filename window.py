@@ -19,7 +19,8 @@ class SoundToNotesApp(QMainWindow):
         self.initUI()
         self.temp_files = []  # List to manage temporary files
         self.current_pdf_path = None  # Store the current PDF path
-        self.player = None
+        self.mp3_player = None
+        self.midi_player = None
 
     def initUI(self):
         # Set up the central widget and main layout
@@ -68,29 +69,20 @@ class SoundToNotesApp(QMainWindow):
         # Set up the controls group box
         controlsGroupBox = QGroupBox("Controls")
         controlsLayout = QHBoxLayout()
+
+        # Set up the MP3 playr buttonsgroup box
+        MP3GroupBox = QGroupBox("MP3 player")
+        MP3Layout = QHBoxLayout()
+
+        # Set up the MIDI playr buttonsgroup box
+        MidiGroupBox = QGroupBox("MIDI player")
+        MidiLayout = QHBoxLayout()
+
         self.transcribeButton = QPushButton('Transcribe')
         self.transcribeButton.clicked.connect(self.startTranscription)
         self.transcribeButton.setEnabled(False)
         controlsLayout.addWidget(self.transcribeButton)
-        
-        self.playMP3Button = QPushButton('Play')
-        self.playMP3Button.clicked.connect(self.playMedia)
-        self.playMP3Button.setEnabled(False)
-        controlsLayout.addWidget(self.playMP3Button)
 
-        self.pauseButton = QPushButton('Pause/Resume')
-        self.pauseButton.clicked.connect(self.togglePause)
-        self.pauseButton.setEnabled(False)
-        controlsLayout.addWidget(self.pauseButton)
-
-        self.stopButton = QPushButton('Stop')
-        self.stopButton.clicked.connect(self.stopMedia)
-        self.stopButton.setEnabled(False)
-        controlsLayout.addWidget(self.stopButton)
-        # Add the Stop button to the layout
-        
-
-        
         self.saveMidiButton = QPushButton('Save MIDI')
         self.saveMidiButton.clicked.connect(self.saveMidi)
         self.saveMidiButton.setEnabled(False)
@@ -100,9 +92,44 @@ class SoundToNotesApp(QMainWindow):
         self.savePdfButton.clicked.connect(self.savePdf)
         self.savePdfButton.setEnabled(False)
         controlsLayout.addWidget(self.savePdfButton)
+        
+        self.playMP3Button = QPushButton('Play')
+        self.playMP3Button.clicked.connect(self.playMedia)
+        self.playMP3Button.setEnabled(False)
+        MP3Layout.addWidget(self.playMP3Button)
+
+        self.pauseButton = QPushButton('Pause/Resume')
+        self.pauseButton.clicked.connect(self.togglePause)
+        self.pauseButton.setEnabled(False)
+        MP3Layout.addWidget(self.pauseButton)
+
+        self.stopButton = QPushButton('Stop')
+        self.stopButton.clicked.connect(self.stopMedia)
+        self.stopButton.setEnabled(False)
+        MP3Layout.addWidget(self.stopButton)
+        
+        self.playMidiButton = QPushButton('Play')
+        self.playMidiButton.clicked.connect(self.playMediaMidi)
+        self.playMidiButton.setEnabled(False)
+        MidiLayout.addWidget(self.playMidiButton)
+
+        self.pauseMidiButton = QPushButton('Pause/Resume')
+        self.pauseMidiButton.clicked.connect(self.togglePauseMidi)
+        self.pauseMidiButton.setEnabled(False)
+        MidiLayout.addWidget(self.pauseMidiButton)
+
+        self.stopMidiButton = QPushButton('Stop')
+        self.stopMidiButton.clicked.connect(self.stopMediaMidi)
+        self.stopMidiButton.setEnabled(False)
+        MidiLayout.addWidget(self.stopMidiButton)
+        
 
         controlsGroupBox.setLayout(controlsLayout)
+        MP3GroupBox.setLayout(MP3Layout)
+        MidiGroupBox.setLayout(MidiLayout)
         mainLayout.addWidget(controlsGroupBox)
+        mainLayout.addWidget(MP3GroupBox)
+        mainLayout.addWidget(MidiGroupBox)
 
         # Apply any custom stylesheets
         self.applyStylesheet()
@@ -155,10 +182,10 @@ class SoundToNotesApp(QMainWindow):
             self.playMP3Button.setEnabled(True)
             self.pauseButton.setEnabled(False)
             self.stopButton.setEnabled(False)
-        if self.player:
-            self.player.stop()
-            self.player.release()
-        self.player = vlc.MediaPlayer(fileName)
+        if self.mp3_player:
+            self.mp3_player.stop()
+            self.mp3_player.release()
+        self.mp3_player = vlc.MediaPlayer(fileName)
 
 
     def startTranscription(self):
@@ -222,7 +249,10 @@ class SoundToNotesApp(QMainWindow):
         if pdf_path:
             self.current_pdf_path = pdf_path  # Store the current PDF path
             self.display_pdf_from_path(pdf_path)  # Display the PDF automatically  # Display the PDF automatically
-            self.playMIDIButton.setEnabled(True)
+            self.playMidiButton.setEnabled(True)
+        if midi_path:
+            self.temp_files.append(midi_path)
+            self.loadAndPlayGeneratedMIDI(midi_path)
             
 
     def display_pdf_from_path(self, pdf_path):
@@ -246,6 +276,17 @@ class SoundToNotesApp(QMainWindow):
             print(f"Error displaying PDF: {e}")
             self.pdfDisplayLabel.clear()
 
+    def loadAndPlayGeneratedMIDI(self, midi_path):
+        if self.midi_player:
+            self.midi_player.stop()
+            self.midi_player.release()
+
+        self.midi_player = vlc.MediaPlayer(midi_path)
+        self.playMidiButton.setEnabled(True)
+        self.pauseMidiButton.setEnabled(False)
+        self.stopMidiButton.setEnabled(False)
+        self.uploadedFileLabel.setText(f"Ready to play generated MIDI: {os.path.basename(midi_path)}")
+
 
     def resizeEvent(self, event):
         super(SoundToNotesApp, self).resizeEvent(event)  # Make sure to call the base class method
@@ -253,29 +294,49 @@ class SoundToNotesApp(QMainWindow):
             self.display_pdf_from_path(self.current_pdf_path)
 
     def playMedia(self):
-        if self.player:
-            self.player.play()
+        if self.mp3_player:
+            self.mp3_player.play()
             self.pauseButton.setEnabled(True)
             self.stopButton.setEnabled(True)
 
     def togglePause(self):
-        if self.player:
-            if self.player.is_playing():
-                self.player.pause()
+        if self.mp3_player:
+            if self.mp3_player.is_playing():
+                self.mp3_player.pause()
             else:
-                self.player.play()
+                self.mp3_player.play()
 
     def stopMedia(self):
-        if self.player:
-            self.player.stop()
+        if self.mp3_player:
+            self.mp3_player.stop()
             self.pauseButton.setEnabled(False)
             self.stopButton.setEnabled(False)
 
+    def playMediaMidi(self):
+        if self.midi_player:
+            self.midi_player.play()
+            self.pauseMidiButton.setEnabled(True)
+            self.stopMidiButton.setEnabled(True)
+
+    def togglePauseMidi(self):
+        if self.midi_player and self.midi_player.is_playing():
+            self.midi_player.pause()
+        elif self.midi_player:
+            self.midi_player.play()
+
+    def stopMediaMidi(self):
+        if self.midi_player:
+            self.midi_player.stop()
+            self.pauseMidiButton.setEnabled(False)
+            self.stopMidiButton.setEnabled(False)
 
     def closeEvent(self, event):
-        if self.player:
-            self.player.stop()
-            self.player.release()
+        if self.mp3_player:
+            self.mp3_player.stop()
+            self.mp3_player.release()
+        if self.midi_player:
+            self.midi_player.stop()
+            self.midi_player.release()
         super().closeEvent(event)
         # Cleanup temporary files on application close
         for file_path in self.temp_files:
