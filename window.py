@@ -4,13 +4,14 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton, QTextEdit,
 from PySide6.QtCore import QThread, Qt, QEvent, QTimer
 from PySide6.QtGui import QIcon, QPixmap, QImage
 from PySide6.QtPdfWidgets import QPdfView
-from PySide6.QtPdf import QPdfDocument
+from PySide6.QtPdf import QPdfDocument, QPdfPageRenderer
 from transcription_worker import TranscriptionWorker
 import os
 import shutil
 import tempfile
 import threading
 import vlc
+from pdf2image import convert_from_path
 
 class SoundToNotesApp(QMainWindow):
     def __init__(self):
@@ -128,12 +129,15 @@ class SoundToNotesApp(QMainWindow):
         # pdfGroupBox.setLayout(pdfLayout)
         # mainLayout.addWidget(pdfGroupBox, 2)  # Set stretch factor to 2 for a 1:2 ratio
 
-        # PDF Display area using QPdfView
+        # # PDF Display area using a scrollable layout
         pdfGroupBox = QGroupBox("PDF Preview")
         pdfLayout = QVBoxLayout()
-        self.pdfView = QPdfView()
-        self.pdfView.setZoomMode(QPdfView.FitToWidth)  # Automatically adjusts the PDF to fit the width of the view
-        pdfLayout.addWidget(self.pdfView)
+        self.scrollArea = QScrollArea()
+        self.scrollArea.setWidgetResizable(True)  # Makes the scroll area adjust to the contents
+        self.scrollWidget = QWidget()
+        self.scrollLayout = QVBoxLayout(self.scrollWidget)  # This layout holds the images
+        self.scrollArea.setWidget(self.scrollWidget)
+        pdfLayout.addWidget(self.scrollArea)
         pdfGroupBox.setLayout(pdfLayout)
         mainLayout.addWidget(pdfGroupBox, 2)  # Set stretch factor to 2 for a 1:2 ratio
 
@@ -264,22 +268,92 @@ class SoundToNotesApp(QMainWindow):
         if midi_path:
             self.temp_files.append(midi_path)
             self.loadAndPlayGeneratedMIDI(midi_path)
-        
+
+
+
+    # def display_pdf_from_path(self, pdf_path):
+    #     if not os.path.exists(pdf_path):
+    #         print(f"PDF file not found at: {pdf_path}")
+    #         return
+
+    #     # Adjust DPI here
+    #     dpi_setting = 500  # Increase to 600 DPI for higher quality
+
+    #     # Convert PDF to images
+    #     images = convert_from_path(pdf_path, dpi=dpi_setting)
+
+    #     # Clear previous images if any
+    #     while self.scrollLayout.count():
+    #         item = self.scrollLayout.takeAt(0)
+    #         widget = item.widget()
+    #         if widget is not None:
+    #             widget.deleteLater()
+
+    #     # Get the width of the container
+    #     container_width = self.scrollWidget.width()
+
+    #     # Display each image in the layout, scaled to fit the width
+    #     for img in images:
+    #         qt_image = QImage(img.tobytes(), img.width, img.height, QImage.Format_RGB888)
+    #         pixmap = QPixmap.fromImage(qt_image)
+    #         scaled_pixmap = pixmap.scaledToWidth(container_width)  # Scale the pixmap
+    #         label = QLabel()
+    #         label.setPixmap(scaled_pixmap)
+    #         label.setAlignment(Qt.AlignCenter)
+    #         self.scrollLayout.addWidget(label)
 
     def display_pdf_from_path(self, pdf_path):
         if not os.path.exists(pdf_path):
             print(f"PDF file not found at: {pdf_path}")
             return
 
-        try:
-            # Ensure the PDF document is reloaded each time the function is called
-            if not hasattr(self, 'pdfDocument'):  # Check if pdfDocument is already defined
-                self.pdfDocument = QPdfDocument()
+        images = convert_from_path(pdf_path, dpi=500)
+        container_width = self.scrollWidget.width()  # Assume this is correctly set
 
-            self.pdfDocument.load(pdf_path)  # Load the PDF file into QPdfDocument
-            self.pdfView.setDocument(self.pdfDocument)  # Set the document in QPdfView
-        except Exception as e:
-            print(f"Error displaying PDF: {e}")
+        for img in images:
+            qt_image = QImage(img.tobytes(), img.width, img.height, QImage.Format_RGB888)
+            pixmap = QPixmap.fromImage(qt_image)
+            # Use the `scaled` method with the width and an automatic height calculation
+            scaled_pixmap = pixmap.scaled(container_width, pixmap.height(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
+            label = QLabel()
+            label.setPixmap(scaled_pixmap)
+            label.setAlignment(Qt.AlignCenter)
+            self.scrollLayout.addWidget(label)
+
+
+
+
+
+    # def display_pdf_from_path(self, pdf_path):
+    #     if not os.path.exists(pdf_path):
+    #         print(f"PDF file not found at: {pdf_path}")
+    #         return
+
+    #     # Load the PDF document
+    #     self.pdfDocument = QPdfDocument()
+    #     self.pdfDocument.load(pdf_path)
+
+    #     # Create a PDF page renderer
+    #     renderer = QPdfPageRenderer()
+
+    #     # Render each page as an image and add to the layout
+    #     for i in range(self.pdfDocument.pageCount()):
+    #         # Create an image to render the page into
+    #         page = self.pdfDocument.page(i)
+    #         if page is None:
+    #             continue
+            
+    #         imageSize = page.pageSize().toSize()
+    #         image = QImage(imageSize, QImage.Format_ARGB32)
+
+    #         # Check if the image is valid and render the page into it
+    #         if image.isValid():
+    #             renderer.render(page, image)
+    #             pixmap = QPixmap.fromImage(image)
+    #             label = QLabel()
+    #             label.setPixmap(pixmap)
+    #             label.setAlignment(Qt.AlignCenter)
+    #             self.scrollLayout.addWidget(label)
 
     def resizeEvent(self, event):
         super(SoundToNotesApp, self).resizeEvent(event)
