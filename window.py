@@ -3,6 +3,8 @@ import fitz  # PyMuPDF
 from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton, QTextEdit, QVBoxLayout, QWidget, QFileDialog, QProgressBar, QHBoxLayout, QGroupBox, QLabel, QScrollArea, QSizePolicy
 from PySide6.QtCore import QThread, Qt, QEvent, QTimer
 from PySide6.QtGui import QIcon, QPixmap, QImage
+from PySide6.QtPdfWidgets import QPdfView
+from PySide6.QtPdf import QPdfDocument
 from transcription_worker import TranscriptionWorker
 import os
 import shutil
@@ -14,7 +16,7 @@ class SoundToNotesApp(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('Sound to Notes Transcription')
-        self.setGeometry(100, 100, 1000, 800)
+        self.setGeometry(100, 100, 1300, 800)
         self.setWindowIcon(QIcon('adds/favicon.ico'))  # Ensure this path is correct
         self.temp_files = []  # List to manage temporary files
         self.current_pdf_path = None  # Store the current PDF path
@@ -55,7 +57,7 @@ class SoundToNotesApp(QMainWindow):
         transcriptionLayout.setSpacing(10)  # Adjust spacing
         self.transcriptionDisplay = QTextEdit()
         self.transcriptionDisplay.setMaximumHeight(50)
-        transcriptionLayout.addWidget(self.transcriptionDisplay)
+        controlsContainer.addWidget(self.transcriptionDisplay)
         self.transcribeButton = QPushButton('Transcribe')
         self.transcribeButton.clicked.connect(self.startTranscription)
         self.transcribeButton.setEnabled(False)
@@ -114,21 +116,29 @@ class SoundToNotesApp(QMainWindow):
         # Add the left column layout to the main layout
         mainLayout.addLayout(controlsContainer, 1)
 
-        # PDF Display area
+        # # PDF Display area
+        # pdfGroupBox = QGroupBox("PDF Preview")
+        # pdfLayout = QVBoxLayout()
+        # self.scrollArea = QScrollArea()
+        # self.scrollArea.setWidgetResizable(True)
+        # self.scrollWidget = QWidget()
+        # self.scrollLayout = QVBoxLayout(self.scrollWidget)
+        # self.scrollArea.setWidget(self.scrollWidget)
+        # pdfLayout.addWidget(self.scrollArea)
+        # pdfGroupBox.setLayout(pdfLayout)
+        # mainLayout.addWidget(pdfGroupBox, 2)  # Set stretch factor to 2 for a 1:2 ratio
+
+        # PDF Display area using QPdfView
         pdfGroupBox = QGroupBox("PDF Preview")
         pdfLayout = QVBoxLayout()
-        self.scrollArea = QScrollArea()
-        self.scrollArea.setWidgetResizable(True)
-        self.scrollWidget = QWidget()
-        self.scrollLayout = QVBoxLayout(self.scrollWidget)
-        self.scrollArea.setWidget(self.scrollWidget)
-        pdfLayout.addWidget(self.scrollArea)
+        self.pdfView = QPdfView()
+        self.pdfView.setZoomMode(QPdfView.FitToWidth)  # Automatically adjusts the PDF to fit the width of the view
+        pdfLayout.addWidget(self.pdfView)
         pdfGroupBox.setLayout(pdfLayout)
         mainLayout.addWidget(pdfGroupBox, 2)  # Set stretch factor to 2 for a 1:2 ratio
 
         # Apply custom stylesheets
         self.applyStylesheet()
-
 
 
     def applyStylesheet(self):
@@ -254,75 +264,27 @@ class SoundToNotesApp(QMainWindow):
         if midi_path:
             self.temp_files.append(midi_path)
             self.loadAndPlayGeneratedMIDI(midi_path)
-            
+        
 
     def display_pdf_from_path(self, pdf_path):
-        try:
-            if not os.path.exists(pdf_path):
-                raise FileNotFoundError(f"PDF file not found at {pdf_path}")
-
-            doc = fitz.open(pdf_path)
-            # Clear existing content in the scroll area layout
-            while self.scrollLayout.count():
-                child = self.scrollLayout.takeAt(0)
-                if child.widget():
-                    child.widget().deleteLater()
-
-            # Calculate the appropriate zoom based on the width of the scroll area viewport
-            viewport_width = self.scrollArea.viewport().size().width()
-            # Iterate over each page in the PDF
-            for i in range(len(doc)):
-                page = doc[i]
-                # Calculate scale to fit the page within the width of the viewport while maintaining the aspect ratio
-                zoom = viewport_width / page.rect.width
-                mat = fitz.Matrix(zoom, zoom)  # Create a transformation matrix for the zoom
-                pix = page.get_pixmap(matrix=mat)  # Render the page as a pixmap with the transformation matrix
-
-                img = QImage(pix.samples, pix.width, pix.height, QImage.Format_RGB888)
-                pixmap = QPixmap.fromImage(img)
-                label = QLabel()
-                label.setPixmap(pixmap)
-                self.scrollLayout.addWidget(label)
-
-        except Exception as e:
-            print(f"Error displaying PDF: {e}")
-        finally:
-            doc.close()
-
-    def update_pdf_display(self):
-        if not self.current_pdf_path or not self.original_page_sizes:
+        if not os.path.exists(pdf_path):
+            print(f"PDF file not found at: {pdf_path}")
             return
 
-        doc = fitz.open(self.current_pdf_path)
-        while self.scrollLayout.count():
-            child = self.scrollLayout.takeAt(0)
-            if child.widget():
-                child.widget().deleteLater()
+        try:
+            # Ensure the PDF document is reloaded each time the function is called
+            if not hasattr(self, 'pdfDocument'):  # Check if pdfDocument is already defined
+                self.pdfDocument = QPdfDocument()
 
-        viewport_width = self.scrollArea.viewport().size().width()
-        for i, size in enumerate(self.original_page_sizes):
-            page = doc[i]
-            zoom = viewport_width / size[0]  # Use the original width for scaling
-            mat = fitz.Matrix(zoom, zoom)
-            pix = page.get_pixmap(matrix=mat)
-            
-            img = QImage(pix.samples, pix.width, pix.height, QImage.Format_RGB888)
-            pixmap = QPixmap.fromImage(img)
-            label = QLabel()
-            label.setPixmap(pixmap)
-            self.scrollLayout.addWidget(label)
-        doc.close()
+            self.pdfDocument.load(pdf_path)  # Load the PDF file into QPdfDocument
+            self.pdfView.setDocument(self.pdfDocument)  # Set the document in QPdfView
+        except Exception as e:
+            print(f"Error displaying PDF: {e}")
 
     def resizeEvent(self, event):
         super(SoundToNotesApp, self).resizeEvent(event)
         if hasattr(self, 'current_pdf_path') and self.current_pdf_path:
             self.display_pdf_from_path(self.current_pdf_path)
-    
-
-    def update_pdf_display(self):
-        if not hasattr(self, 'current_pdf_path') or not self.current_pdf_path:
-            return
-        self.display_pdf_from_path(self.current_pdf_path)
 
 
 
