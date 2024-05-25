@@ -4,7 +4,7 @@
 \usepackage{hyperref}
 
 \title{Application for Transcribing Grand Piano Recordings to Sheet Music in PDF}
-\author{Your Name}
+\author{Michał Jagoda}
 \date{\today}
 
 \begin{document}
@@ -22,15 +22,16 @@ This project involves creating an application designed to transcribe grand piano
 \begin{itemize}
     \item To accurately transcribe piano recordings into readable sheet music.
     \item To provide a user-friendly interface for uploading audio files and exporting sheet music.
-    \item To offer customizable options for the transcription process to suit different user needs.
+    \item To offer offline and local application for accessibility and privacy reasons.
 \end{itemize}
 
 \subsection{Key Components}
 \begin{itemize}
     \item \textbf{Audio Processing:} Capturing and processing the audio signals from the grand piano recordings.
-    \item \textbf{Music Transcription:} Converting the processed audio signals into musical notation.
-    \item \textbf{PDF Generation:} Formatting the musical notation into a PDF document that can be easily printed or shared.
-    \item \textbf{User Interface:} Allowing users to interact with the application, upload audio files, customize transcription settings, and download the resulting sheet music.
+    \item \textbf{AI Model:} Generating an initial transcription output from the uploaded MP3 file.
+    \item \textbf{Postprocessing Algorithm:} Creating a MIDI file from the AI model's output.
+    \item \textbf{PDF Generation:} Using the MuseScore API to generate a PDF from the generated MIDI file.
+    \item \textbf{User Interface:} Allowing users to interact with the application, upload audio files, view PDF previews, listen to MIDI and MP3 files, and download the resulting sheet music and MIDI files.
 \end{itemize}
 
 \section{Functional Requirements}
@@ -39,51 +40,29 @@ This project involves creating an application designed to transcribe grand piano
 \begin{itemize}
     \item \textbf{Audio File Upload:}
     \begin{itemize}
-        \item Users can upload audio files in various formats (e.g., MP3, WAV).
+        \item Users can upload MP3 audio files.
     \end{itemize}
-    \item \textbf{Audio Processing:}
+    \item \textbf{AI Model:}
     \begin{itemize}
-        \item The system processes the uploaded audio to identify notes, rhythms, and dynamics.
+        \item The system processes the uploaded audio using an AI model to generate an initial transcription.
     \end{itemize}
-    \item \textbf{Transcription:}
+    \item \textbf{Postprocessing Algorithm:}
     \begin{itemize}
-        \item The application converts the processed audio data into musical notation.
-        \item Users can view the transcription in real-time as it is being processed.
+        \item The application converts the AI model's output into a MIDI file.
     \end{itemize}
-    \item \textbf{Editing Tools:}
+    \item \textbf{PDF Generation:}
     \begin{itemize}
-        \item Users can manually adjust the transcription for accuracy.
-        \item Tools for adding/removing notes, adjusting rhythms, and adding dynamics and articulations.
+        \item The MuseScore API is used to convert the generated MIDI file into a PDF document.
     \end{itemize}
-    \item \textbf{PDF Export:}
+    \item \textbf{PDF Preview and Download:}
     \begin{itemize}
-        \item Users can export the final sheet music as a PDF file.
-        \item Options to include title, composer, and other metadata in the PDF.
+        \item Users can preview the PDF of the sheet music.
+        \item Users can download the PDF and the MIDI file.
     \end{itemize}
     \item \textbf{Playback Feature:}
     \begin{itemize}
-        \item Users can listen to the transcription to verify accuracy.
-        \item Synchronized playback with the sheet music display.
-    \end{itemize}
-\end{itemize}
-
-\subsection{Advanced Functionalities}
-\begin{itemize}
-    \item \textbf{Customization:}
-    \begin{itemize}
-        \item Users can adjust settings for the transcription process, such as tempo detection, key signature, and time signature.
-    \end{itemize}
-    \item \textbf{Multi-Language Support:}
-    \begin{itemize}
-        \item The interface supports multiple languages for wider accessibility.
-    \end{itemize}
-    \item \textbf{Cloud Integration:}
-    \begin{itemize}
-        \item Option to save transcriptions to cloud storage services like Google Drive or Dropbox.
-    \end{itemize}
-    \item \textbf{Collaboration:}
-    \begin{itemize}
-        \item Users can share transcription projects with others for collaboration.
+        \item Users can listen to the transcription by playing the MIDI file.
+        \item Users can also listen to the original MP3 file.
     \end{itemize}
 \end{itemize}
 
@@ -91,31 +70,17 @@ This project involves creating an application designed to transcribe grand piano
 
 \subsection{Performance Requirements}
 \begin{itemize}
-    \item \textbf{Speed:} The transcription process should be completed within a reasonable time frame (e.g., under 5 minutes for a 5-minute recording).
-    \item \textbf{Accuracy:} The transcription should accurately reflect the notes, rhythms, and dynamics of the original recording with a high degree of precision (e.g., over 90\% accuracy).
+    \item \textbf{Speed:} The transcription process should be completed within a reasonable time frame (under 15 minutes for a 5-minute recording).
+    \item \textbf{Accuracy:} The transcription should accurately reflect the notes, rhythms, and dynamics of the original recording with a high degree of precision (over 90\% accuracy).
 \end{itemize}
 
 \subsection{Usability Requirements}
 \begin{itemize}
     \item \textbf{User Interface:} The interface should be intuitive and easy to navigate, even for users with limited technical skills.
-    \item \textbf{Accessibility:} The application should be accessible to users with disabilities, providing features like screen reader compatibility and keyboard navigation.
-\end{itemize}
-
-\subsection{Reliability Requirements}
-\begin{itemize}
-    \item \textbf{Uptime:} The application should have a high availability rate, with minimal downtime.
-    \item \textbf{Error Handling:} The system should handle errors gracefully, providing clear messages to the user and options for recovery.
-\end{itemize}
-
-\subsection{Security Requirements}
-\begin{itemize}
-    \item \textbf{Data Privacy:} User data, including audio files and personal information, should be protected with strong encryption.
-    \item \textbf{Authentication:} Secure user authentication methods should be in place to protect user accounts.
 \end{itemize}
 
 \subsection{Compatibility Requirements}
 \begin{itemize}
-    \item \textbf{Cross-Platform Support:} The application should be compatible with various operating systems, including Windows, macOS, and Linux.
     \item \textbf{File Format Support:} The application should support common audio file formats and produce PDFs that are compatible with standard PDF readers.
 \end{itemize}
 
@@ -127,7 +92,6 @@ This project involves creating an application designed to transcribe grand piano
 
 \subsection{Scalability Requirements}
 \begin{itemize}
-    \item \textbf{Load Handling:} The system should be able to handle multiple users and large audio files without significant performance degradation.
     \item \textbf{Future Expansion:} The architecture should allow for easy addition of new features and functionalities.
 \end{itemize}
 
