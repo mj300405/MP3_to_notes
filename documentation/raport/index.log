@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.1)  25 MAY 2024 19:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.1)  28 MAY 2024 13:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Michal/Desktop/MP3_to_notes/documentation/index.tex
-(c:/Users/Michal/Desktop/MP3_to_notes/documentation/index.tex
+**c:/Users/Michal/Desktop/MP3_to_notes/documentation/raport/index.tex
+(c:/Users/Michal/Desktop/MP3_to_notes/documentation/raport/index.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-09-28> (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -108,6 +108,23 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
+) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+\stockwidth=\dimen156
+\stockheight=\dimen157
+))
+\Gin@req@height=\dimen158
+\Gin@req@width=\dimen159
 ) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2022-09-22 v7.00t Hypertext links for LaTeX
  (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
@@ -143,7 +160,7 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count274
 )
-\@linkdim=\dimen156
+\@linkdim=\dimen160
 \Hy@linkcounter=\count275
 \Hy@pagecounter=\count276
  (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
@@ -167,8 +184,6 @@ Package hyperref Info: Hyper index ON on input line 4170.
 Package hyperref Info: Plain pages OFF on input line 4177.
 Package hyperref Info: Backreferencing OFF on input line 4182.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-\stockwidth=\dimen157
-\stockheight=\dimen158
 Package hyperref Info: Bookmarks ON on input line 4410.
 \c@Hy@tempcnt=\count278
  (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
@@ -176,15 +191,15 @@ Package hyperref Info: Bookmarks ON on input line 4410.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4748.
-\XeTeXLinkMargin=\dimen159
+\XeTeXLinkMargin=\dimen161
  (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count279
-\Field@Width=\dimen160
-\Fld@charsize=\dimen161
+\Field@Width=\dimen162
+\Fld@charsize=\dimen163
 Package hyperref Info: Hyper figures OFF on input line 6027.
 Package hyperref Info: Link nesting OFF on input line 6032.
 Package hyperref Info: Hyper index ON on input line 6035.
@@ -224,24 +239,24 @@ File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
 ) (index.aux)
 \openout1 = `index.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -277,8 +292,27 @@ LaTeX Font Info:    ... okay on input line 10.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 10.
-(index.out) (index.out)
+(C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count286
+\scratchdimen=\dimen164
+\scratchbox=\box54
+\nofMPsegments=\count287
+\nofMParguments=\count288
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count289
+\MPscratchDim=\dimen165
+\MPnumerator=\count290
+\makeMPintoPDFobject=\count291
+\everyMPtoPDFconversion=\toks24
+) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package hyperref Info: Link coloring OFF on input line 11.
+ (index.out) (index.out)
 \@outlinefile=\write3
 \openout3 = `index.out'.
 
@@ -288,22 +322,104 @@ Package hyperref Info: Link coloring OFF on input line 10.
 
  [1
 
-{C:/Users/Michal/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3] (index.aux)
+{C:/Users/Michal/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Overfull \hbox (70.17699pt too wide) in paragraph at lines 42--43
+[]\OT1/cmr/bx/n/10 Piano Tran-scrip-tion In-fer-ence: \OT1/cmr/m/n/10 A li-brary for tran-scrib-ing pi-ano mu-sic, used in \OT1/cmtt/m/n/10 transcription[]worker.py\OT1/cmr/m/n/10 . 
+ []
+
+
+Overfull \hbox (15.00436pt too wide) in paragraph at lines 44--45
+[]\OT1/cmr/bx/n/10 MuseScore: \OT1/cmr/m/n/10 A soft-ware for cre-at-ing, play-ing, and print-ing sheet mu-sic, used in \OT1/cmtt/m/n/10 generate[]pdf.py
+ []
+
+[2] [3]
+<../diagrams/use_case.png, id=124, 710.655pt x 554.07pt>
+File: ../diagrams/use_case.png Graphic file (type png)
+<use ../diagrams/use_case.png>
+Package pdftex.def Info: ../diagrams/use_case.png  used on input line 116.
+(pdftex.def)             Requested size: 344.005pt x 268.21635pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../diagrams/class_diagram.png, id=126, 888.31876pt x 559.08875pt>
+File: ../diagrams/class_diagram.png Graphic file (type png)
+<use ../diagrams/class_diagram.png>
+Package pdftex.def Info: ../diagrams/class_diagram.png  used on input line 132.
+(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../diagrams/transcription_seq.png, id=127, 888.31876pt x 559.08875pt>
+File: ../diagrams/transcription_seq.png Graphic file (type png)
+<use ../diagrams/transcription_seq.png>
+Package pdftex.def Info: ../diagrams/transcription_seq.png  used on input line 141.
+(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../diagrams/audio_seq.png, id=128, 888.31876pt x 559.08875pt>
+File: ../diagrams/audio_seq.png Graphic file (type png)
+<use ../diagrams/audio_seq.png>
+Package pdftex.def Info: ../diagrams/audio_seq.png  used on input line 148.
+(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../diagrams/load_audio_seq.png, id=129, 888.31876pt x 559.08875pt>
+File: ../diagrams/load_audio_seq.png Graphic file (type png)
+<use ../diagrams/load_audio_seq.png>
+Package pdftex.def Info: ../diagrams/load_audio_seq.png  used on input line 155.
+(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../diagrams/save_midi_seq.png, id=130, 888.31876pt x 559.08875pt>
+File: ../diagrams/save_midi_seq.png Graphic file (type png)
+<use ../diagrams/save_midi_seq.png>
+Package pdftex.def Info: ../diagrams/save_midi_seq.png  used on input line 162.
+(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../diagrams/save_pdf_seq.png, id=131, 888.31876pt x 559.08875pt>
+File: ../diagrams/save_pdf_seq.png Graphic file (type png)
+<use ../diagrams/save_pdf_seq.png>
+Package pdftex.def Info: ../diagrams/save_pdf_seq.png  used on input line 169.
+(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../diagrams/ai_architecture.png, id=132, 888.31876pt x 559.08875pt>
+File: ../diagrams/ai_architecture.png Graphic file (type png)
+<use ../diagrams/ai_architecture.png>
+Package pdftex.def Info: ../diagrams/ai_architecture.png  used on input line 178.
+(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4] [5 <../diagrams/use_case.png>] [6 <../diagrams/class_diagram.png> <../diagrams/transcription_seq.png>] [7 <../diagrams/audio_seq.png> <../diagrams/load_audio_seq.png>] [8 <../diagrams/save_midi_seq.png> <../diagrams/save_pdf_seq.png>] [9 <../diagrams/ai_architecture.png>] (index.aux)
 Package rerunfilecheck Info: File `index.out' has not changed.
-(rerunfilecheck)             Checksum: D98A7ABD1A24C536BB6085713F3BA242;1969.
+(rerunfilecheck)             Checksum: AA2D5ABB2D78EE5E5CC33D171C2B72B7;3137.
  ) 
 Here is how much of TeX's memory you used:
- 8519 strings out of 475386
- 135828 string characters out of 5776435
- 491650 words of memory out of 5000000
- 29812 multiletter control sequences out of 15000+600000
- 474977 words of font info for 48 fonts, out of 8000000 for 9000
+ 9446 strings out of 475386
+ 151159 string characters out of 5776435
+ 504727 words of memory out of 5000000
+ 30675 multiletter control sequences out of 15000+600000
+ 475145 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,6n,77p,416b,506s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Michal\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on index.pdf (3 pages, 98270 bytes).
+ 72i,6n,77p,423b,506s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Michal\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on index.pdf (9 pages, 306046 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 218 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
