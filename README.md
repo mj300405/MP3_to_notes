@@ -36,7 +36,18 @@ This application transcribes grand piano recordings into sheet music and exports
     sudo apt-get install vlc
     ```
 
-7. **Install and configure an X-server:**
+7. **Install and configure PulseAudio:**
+    - Install PulseAudio:
+      ```sh
+      sudo apt-get install pulseaudio
+      ```
+    - Configure PulseAudio by adding the following lines to your `.bashrc` or `.zshrc` file:
+      ```sh
+      echo "export PULSE_SERVER=127.0.0.1" >> ~/.bashrc
+      source ~/.bashrc
+      ```
+
+8. **Install and configure an X-server:**
     - Download and install an X-server for Windows, such as [VcXsrv](https://sourceforge.net/projects/vcxsrv/) or [Xming](https://sourceforge.net/projects/xming/).
     - Start the X-server before running GUI applications in WSL2.
     - Configure WSL2 to use the X-server by adding the following line to your `.bashrc` or `.zshrc` file:
