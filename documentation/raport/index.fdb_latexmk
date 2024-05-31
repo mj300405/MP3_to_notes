@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1717160143 "c:/Users/Michal/Desktop/MP3_to_notes/documentation/raport/index.tex" "index.pdf" "index" 1717160145 0
+["pdflatex"] 1717169143 "c:/Users/Michal/Desktop/MP3_to_notes/documentation/raport/index.tex" "index.pdf" "index" 1717169145 0
   "../diagrams/ai_architecture.png" 1716895035 54250 c9c4d4cb54d8b097e246e4455b9be329 ""
   "../diagrams/audio_seq.png" 1716894857 45984 d4837e4bfc0e05ead1682be979cfee23 ""
   "../diagrams/class_diagram.png" 1716894369 44721 a666c8a9c41fba44cda2a18745e9eb16 ""
@@ -105,11 +105,11 @@
   "C:/Users/Michal/AppData/Local/Programs/MiKTeX/tex/latex/varwidth/varwidth.sty" 1238469540 10894 d359a13923460b2a73d4312d613554c8 ""
   "C:/Users/Michal/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/Michal/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "c:/Users/Michal/Desktop/MP3_to_notes/documentation/raport/index.tex" 1717160141 14858 7b5be521f7b34d0d6f4bbbd01c634ea8 ""
-  "index.aux" 1717160145 7376 8b04020b405cc2ba621069b85b4e36e7 "pdflatex"
-  "index.out" 1717160145 5789 414ab5b143e8a18270c4b6318633d2f1 "pdflatex"
-  "index.tex" 1717160141 14858 7b5be521f7b34d0d6f4bbbd01c634ea8 ""
-  "index.toc" 1717160145 2894 c56ff1c049a26b4f1f618f5715c12926 "pdflatex"
+  "c:/Users/Michal/Desktop/MP3_to_notes/documentation/raport/index.tex" 1717169139 14869 519182cfe80d5c44ad3cc463fcef322a ""
+  "index.aux" 1717169145 7316 0e47bcb4518faf30de3743c245c75e1d "pdflatex"
+  "index.out" 1717169145 5789 414ab5b143e8a18270c4b6318633d2f1 "pdflatex"
+  "index.tex" 1717169139 14869 519182cfe80d5c44ad3cc463fcef322a ""
+  "index.toc" 1717169145 2894 c56ff1c049a26b4f1f618f5715c12926 "pdflatex"
   (generated)
   "index.aux"
   "index.log"

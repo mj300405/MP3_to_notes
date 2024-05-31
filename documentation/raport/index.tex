@@ -12,10 +12,6 @@
 
 \setlength{\parindent}{2em} % Add this line to set paragraph indentation
 
-\title{Application for Transcribing Grand Piano Recordings to Sheet Music in PDF}
-\author{Michał Jagoda}
-\date{\today}
-
 \begin{document}
 
 \begin{titlepage}
@@ -258,38 +254,49 @@ For the implementation of the application I encourage you to visit the GitHub re
 \clearpage
 \begin{figure}[htbp]
     \centering
-    \includepdf[pages={1}]{../gen_notes/chopin.pdf}
+    \phantomsection
     \label{fig:generated_chopin}
+    \includepdf[pages={1}]{../gen_notes/chopin.pdf}
 \end{figure}
+
 \clearpage
 \begin{figure}[htbp]
     \centering
-    \includepdf[pages={22}]{../gen_notes/Chopin_Op.10.pdf}
+    \phantomsection
     \label{fig:original_chopin}
+    \includepdf[pages={22}]{../gen_notes/Chopin_Op.10.pdf}
 \end{figure}
+
 \clearpage
 \begin{figure}[htbp]
     \centering
-    \includepdf[pages={1}]{../gen_notes/waldstein.pdf}
+    \phantomsection
     \label{fig:generated_waldstein}
+    \includepdf[pages={1}]{../gen_notes/waldstein.pdf}
 \end{figure}
+
 \clearpage
 \begin{figure}[htbp]
     \centering
-    \includepdf[pages={3}]{../gen_notes/waldstein-1st-movement.pdf}
+    \phantomsection
     \label{fig:original_waldstein}
+    \includepdf[pages={3}]{../gen_notes/waldstein-1st-movement.pdf}
 \end{figure}
+
 \clearpage
 \begin{figure}[htbp]
     \centering
-    \includepdf[pages={1}]{../gen_notes/Adagio-cantabile.pdf}
+    \phantomsection
     \label{fig:generated_pathetique}
+    \includepdf[pages={1}]{../gen_notes/Adagio-cantabile.pdf}
 \end{figure}
+
 \clearpage
 \begin{figure}[htbp]
     \centering
-    \includepdf[pages={8}]{../gen_notes/Pathetique.pdf}
+    \phantomsection
     \label{fig:original_pathetique}
+    \includepdf[pages={8}]{../gen_notes/Pathetique.pdf}
 \end{figure}
 
 
