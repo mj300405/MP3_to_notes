@@ -3,6 +3,14 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{float} % For precise float placement
+\usepackage{placeins} % For FloatBarrier
+\usepackage{adjustbox} % For adjusting box sizes
+\usepackage{pdfpages}
+\usepackage{parskip}
+\usepackage{indentfirst}
+
+\setlength{\parindent}{2em} % Add this line to set paragraph indentation
 
 \title{Application for Transcribing Grand Piano Recordings to Sheet Music in PDF}
 \author{Michał Jagoda}
@@ -10,9 +18,24 @@
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+    \centering
+    \vspace*{2cm} % Adjust the vertical space as needed
+    {\Huge \bfseries Application for Transcribing Grand Piano Recordings to Sheet Music in PDF\par}
+    \vspace{8cm}
+    {\Large \textbf{Subject:} Computer Engineering Project\par}
+    \vspace{0.5cm}
+    {\Large \textbf{Supervisor:} Prof. Mariagrazia Fugini\par}
+    \vspace{0.5cm}
+    {\Large \textbf{Author:} Michał Jagoda\par}
+    \vspace{0.5cm}
+    {\Large \today\par}
+    \vfill
+\end{titlepage}
 
+\clearpage % Start a new page before the ToC
 \tableofcontents
+\clearpage % Start a new page after the ToC
 
 \section{Topic Analysis}
 
@@ -35,6 +58,8 @@ This project involves creating a desktop application designed to transcribe gran
     \item \textbf{User Interface:} Allowing users to interact with the application, upload audio files, view PDF previews, listen to MIDI and MP3 files, and download the resulting sheet music and MIDI files via \texttt{window.py}.
 \end{itemize}
 
+\FloatBarrier % Ensures that all floats are processed before moving to the next section
+
 \section{Technologies Used}
 \begin{itemize}
     \item \textbf{Python:} The primary programming language used for developing the application.
@@ -48,6 +73,8 @@ This project involves creating a desktop application designed to transcribe gran
     \item \textbf{Tempfile:} A Python module used for creating temporary files, ensuring that the application handles file operations efficiently and securely.
     \item \textbf{WSL2 (Windows Subsystem for Linux):} Used to run some Python libraries that were not available on Windows. As WSL2 lacks support for audio and GUI components, server bridges were implemented to facilitate communication between the audio processing and GUI components running in different environments.
 \end{itemize}
+
+\FloatBarrier
 
 \section{Functional Requirements}
 
@@ -81,6 +108,8 @@ This project involves creating a desktop application designed to transcribe gran
     \end{itemize}
 \end{itemize}
 
+\FloatBarrier
+\clearpage
 \section{Non-Functional Requirements}
 
 \subsection{Performance Requirements}
@@ -110,85 +139,189 @@ This project involves creating a desktop application designed to transcribe gran
     \item \textbf{Future Expansion:} The architecture should allow for easy addition of new features and functionalities.
 \end{itemize}
 
+\FloatBarrier
+\clearpage
 \section{Use Case Diagram}
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{../diagrams/use_case.png}
+    \includegraphics[width=\textwidth]{../diagrams/use_case.png}
     \caption{Use Case Diagram}
     \label{fig:use_case}
 \end{figure}
 
+\FloatBarrier
+\clearpage
 \section{System Architecture Flow Chart}
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    %\includegraphics[width=0.8\textwidth]{system_architecture_flow_chart.png}
+    \includegraphics[width=\textwidth]{../diagrams/system_architecture.png}
     \caption{System Architecture Flow Chart}
     \label{fig:system_architecture}
 \end{figure}
 
+\FloatBarrier
+\clearpage
+
 \section{Class Diagram}
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{../diagrams/class_diagram.png}
+    \includegraphics[width=\textwidth]{../diagrams/class_diagram.png}
     \caption{Class Diagram}
     \label{fig:class_diagram}
 \end{figure}
 
+\FloatBarrier
+\clearpage
+
 \section{Sequence Diagrams}
 
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{../diagrams/transcription_seq.png}
+    \includegraphics[width=\textwidth]{../diagrams/transcription_seq.png}
     \caption{Transcription process sequence diagram}
     \label{fig:transcription_sequence_diagram}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{../diagrams/audio_seq.png}
+    \includegraphics[width=\textwidth]{../diagrams/audio_seq.png}
     \caption{Audio sequence diagram}
     \label{fig:audio_sequence_diagram}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{../diagrams/load_audio_seq.png}
+    \includegraphics[width=\textwidth]{../diagrams/load_audio_seq.png}
     \caption{Load file sequence diagram}
     \label{fig:load_audio_sequence_diagram}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{../diagrams/save_midi_seq.png}
+    \includegraphics[width=\textwidth]{../diagrams/save_midi_seq.png}
     \caption{Save MIDI sequence diagram}
     \label{fig:save_midi_sequence_diagram}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{../diagrams/save_pdf_seq.png}
+    \includegraphics[width=\textwidth]{../diagrams/save_pdf_seq.png}
     \caption{Save PDF sequence diagram}
     \label{fig:save_pdf_sequence_diagram}
 \end{figure}
 
+\FloatBarrier
+\clearpage
 
 \section{AI Model Architecture}
-\begin{figure}[h!]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.8\textwidth]{../diagrams/ai_architecture.png}
+    \includegraphics[width=\textwidth]{../diagrams/ai_architecture.png}
     \caption{AI Model Architecture}
     \label{fig:ai_model_architecture}
 \end{figure}
 
-\section{Comparison of Original and Generated Sheet Music}
-\begin{figure}[h!]
+\section{Code implementation}
+
+For the implementation of the application I encourage you to visit the GitHub repository: \href{https://github.com/mj300405/MP3_to_notes}{link to the repository}.
+
+
+\clearpage
+\FloatBarrier
+\section{Comparison of Generated and Original Sheet Music}
+
+\subsection{F. Chopin - Etude op. 10 no. 5}
+
+\subsubsection{Generated sheet music}
+\hyperref[fig:generated_chopin]{Link to generated sheet music}
+
+\subsubsection{Original sheet music}
+\hyperref[fig:original_chopin]{Link to original sheet music}
+
+\subsection{L. van Beethoven - Sonata op. 53 no. 21 "Waldstein", Allegro con brio}
+
+\subsubsection{Generated sheet music}
+\hyperref[fig:generated_waldstein]{Link to generated sheet music}
+
+\subsubsection{Original sheet music}
+\hyperref[fig:original_waldstein]{Link to original sheet music}
+
+\subsection{L. van Beethoven - Sonata op. 13 no. 8 "Pathetique", Adagio cantabile}
+
+\subsubsection{Generated sheet music}
+\hyperref[fig:generated_pathetique]{Link to generated sheet music}
+
+\subsubsection{Original sheet music}
+\hyperref[fig:original_pathetique]{Link to original sheet music}
+
+
+\clearpage
+\begin{figure}[htbp]
     \centering
-    %\includegraphics[width=0.8\textwidth]{comparison_sheet_music.png}
-    \caption{Comparison of Original and Generated Sheet Music}
-    \label{fig:comparison_sheet_music}
+    \includepdf[pages={1}]{../gen_notes/chopin.pdf}
+    \label{fig:generated_chopin}
+\end{figure}
+\clearpage
+\begin{figure}[htbp]
+    \centering
+    \includepdf[pages={22}]{../gen_notes/Chopin_Op.10.pdf}
+    \label{fig:original_chopin}
+\end{figure}
+\clearpage
+\begin{figure}[htbp]
+    \centering
+    \includepdf[pages={1}]{../gen_notes/waldstein.pdf}
+    \label{fig:generated_waldstein}
+\end{figure}
+\clearpage
+\begin{figure}[htbp]
+    \centering
+    \includepdf[pages={3}]{../gen_notes/waldstein-1st-movement.pdf}
+    \label{fig:original_waldstein}
+\end{figure}
+\clearpage
+\begin{figure}[htbp]
+    \centering
+    \includepdf[pages={1}]{../gen_notes/Adagio-cantabile.pdf}
+    \label{fig:generated_pathetique}
+\end{figure}
+\clearpage
+\begin{figure}[htbp]
+    \centering
+    \includepdf[pages={8}]{../gen_notes/Pathetique.pdf}
+    \label{fig:original_pathetique}
 \end{figure}
 
+
+
+
+\FloatBarrier
+\clearpage
+\section{Results}
+
+The comparison of the generated and original sheet music shows that the application is able to accurately transcribe grand piano recordings into sheet music. The generated sheet music closely resembles the original sheet music in terms of notes and proportion of notes length. However, there are a lot of differences in used notation, measure, tempo.
+
+Interestingly, the transcribed notes are more precise than original. What I mean by that is that AI can capture the exact note length played by the pianist. That is not always good, because the pianist can play the note a little bit longer or shorter than it is written in the sheet music. That results in darkened transcription because the model transcribes perfectly the note length.
+
+In terms of pitch, the AI model is able to accurately capture the notes played by the pianist. The generated sheet music reflects the original recording with a high degree of precision, capturing the nuances of the performance. The application is able to transcribe complex piano pieces with multiple voices and intricate rhythms, producing sheet music that is faithful to the original recording (but not necessarily to the original sheet music).
+
 \section{Conclusion}
-By addressing both the functional and non-functional requirements outlined above, this application can provide a robust, user-friendly solution for transcribing grand piano recordings into sheet music. This will not only meet the immediate needs of users but also ensure the application's longevity and adaptability to future demands.
+The application successfully transcribes grand piano recordings into sheet music with a high degree of accuracy. The generated sheet music closely resembles the original recording in terms of notes, rhythms, and dynamics. The AI model is able to capture the nuances of the performance, producing sheet music that accurately reflects the pianist's interpretation. The application provides a user-friendly interface for uploading audio files, viewing PDF previews, and downloading the resulting sheet music and MIDI files. The system architecture is designed to be modular and scalable, allowing for easy updates and future expansion. The application meets the performance, usability, compatibility, maintainability, and scalability requirements, providing a reliable and efficient solution for transcribing grand piano recordings to sheet music.
+
+\FloatBarrier
+\section{Possible Improvements}
+\begin{itemize}
+    \item \textbf{Improved AI Model:} Developing second AI model that will be responsible for postprocessing the output of the first model. This model will be responsible for correcting the tempo, measure, and notation of the generated sheet music.
+    \item \textbf{Enhanced User Interface:} Adding more features to the user interface, such as real-time transcription visualization, audio waveform display, and interactive sheet music editing.
+    \item \textbf{Additional Output Formats:} Supporting more output formats, such as MusicXML, MIDI, and audio files, to provide users with more options for sharing
+    \item \textbf{Performance Optimization:} Optimizing the transcription process to reduce the time required for generating sheet music and improving the accuracy of the results.
+    \item \textbf{Creating web application:} Developing a web-based version of the application to make it accessible from any device with an internet connection.
+\end{itemize}
+
+\FloatBarrier
+\section{References}
+\begin{itemize}
+    \item Qiuqiang Kong, Bochen Li, Xuchen Song, Yuan Wan, and Yuxuan Wang. "High-resolution Piano Transcription with Pedals by Regressing Onsets and Offsets Times." arXiv preprint arXiv:2010.01815 (2020). \href{https://arxiv.org/pdf/2010.01815.pdf}{[pdf]}
+\end{itemize}
 
 \end{document}

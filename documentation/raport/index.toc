@@ -12,9 +12,22 @@
 \contentsline {subsection}{\numberline {4.4}Maintainability Requirements}{4}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Scalability Requirements}{4}{subsection.4.5}%
 \contentsline {section}{\numberline {5}Use Case Diagram}{5}{section.5}%
-\contentsline {section}{\numberline {6}System Architecture Flow Chart}{5}{section.6}%
-\contentsline {section}{\numberline {7}Class Diagram}{5}{section.7}%
-\contentsline {section}{\numberline {8}Sequence Diagrams}{5}{section.8}%
-\contentsline {section}{\numberline {9}AI Model Architecture}{5}{section.9}%
-\contentsline {section}{\numberline {10}Comparison of Original and Generated Sheet Music}{5}{section.10}%
-\contentsline {section}{\numberline {11}Conclusion}{5}{section.11}%
+\contentsline {section}{\numberline {6}System Architecture Flow Chart}{6}{section.6}%
+\contentsline {section}{\numberline {7}Class Diagram}{7}{section.7}%
+\contentsline {section}{\numberline {8}Sequence Diagrams}{8}{section.8}%
+\contentsline {section}{\numberline {9}AI Model Architecture}{13}{section.9}%
+\contentsline {section}{\numberline {10}Code implementation}{13}{section.10}%
+\contentsline {section}{\numberline {11}Comparison of Generated and Original Sheet Music}{14}{section.11}%
+\contentsline {subsection}{\numberline {11.1}F. Chopin - Etude op. 10 no. 5}{14}{subsection.11.1}%
+\contentsline {subsubsection}{\numberline {11.1.1}Generated sheet music}{14}{subsubsection.11.1.1}%
+\contentsline {subsubsection}{\numberline {11.1.2}Original sheet music}{14}{subsubsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.2}L. van Beethoven - Sonata op. 53 no. 21 "Waldstein", Allegro con brio}{14}{subsection.11.2}%
+\contentsline {subsubsection}{\numberline {11.2.1}Generated sheet music}{14}{subsubsection.11.2.1}%
+\contentsline {subsubsection}{\numberline {11.2.2}Original sheet music}{14}{subsubsection.11.2.2}%
+\contentsline {subsection}{\numberline {11.3}L. van Beethoven - Sonata op. 13 no. 8 "Pathetique", Adagio cantabile}{14}{subsection.11.3}%
+\contentsline {subsubsection}{\numberline {11.3.1}Generated sheet music}{14}{subsubsection.11.3.1}%
+\contentsline {subsubsection}{\numberline {11.3.2}Original sheet music}{14}{subsubsection.11.3.2}%
+\contentsline {section}{\numberline {12}Results}{21}{section.12}%
+\contentsline {section}{\numberline {13}Conclusion}{21}{section.13}%
+\contentsline {section}{\numberline {14}Possible Improvements}{21}{section.14}%
+\contentsline {section}{\numberline {15}References}{22}{section.15}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.1)  28 MAY 2024 13:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.1)  31 MAY 2024 14:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -232,31 +232,141 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip52
+) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count285
+\float@exts=\toks23
+\float@box=\box53
+\@float@everytoks=\toks24
+\@floatcapt=\box54
+) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
+Package: placeins 2005/04/18  v 2.2
+) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks25
+\XKV@tempa@toks=\toks26
+)
+\XKV@depth=\count286
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box55
+)
+\tc@llx=\dimen164
+\tc@lly=\dimen165
+\tc@urx=\dimen166
+\tc@ury=\dimen167
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen168
+\adjbox@Height=\dimen169
+\adjbox@Depth=\dimen170
+\adjbox@Totalheight=\dimen171
+\adjbox@pwidth=\dimen172
+\adjbox@pheight=\dimen173
+\adjbox@pdepth=\dimen174
+\adjbox@ptotalheight=\dimen175
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count287
+) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box56
+\sift@deathcycles=\count288
+\@vwid@loff=\dimen176
+\@vwid@roff=\dimen177
+)) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
+Package: pdfpages 2024/01/21 v0.5y Insert pages of external PDF documents (AM)
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count289
+\calc@Bcount=\count290
+\calc@Adimen=\dimen178
+\calc@Bdimen=\dimen179
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count291
+\calc@Cskip=\skip55
+) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen180
+\ESO@tempdimb=\dimen181
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+))
+\AM@pagewidth=\dimen182
+\AM@pageheight=\dimen183
+\AM@fboxrule=\dimen184
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
+File: pppdftex.def 2024/01/21 v0.5y Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count292
+\AM@pagebox=\box57
+\AM@global@opts=\toks27
+\AM@pagecnt=\count293
+\AM@toc@title=\toks28
+\AM@lof@heading=\toks29
+\c@AM@survey=\count294
+\AM@templatesizebox=\box58
+) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count295
+)) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 ) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count285
-\l__pdf_internal_box=\box53
+\l__color_backend_stack_int=\count296
+\l__pdf_internal_box=\box59
 ) (index.aux)
 \openout1 = `index.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -294,132 +404,403 @@ LaTeX Font Info:    ... okay on input line 11.
 
 (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count286
-\scratchdimen=\dimen164
-\scratchbox=\box54
-\nofMPsegments=\count287
-\nofMParguments=\count288
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count289
-\MPscratchDim=\dimen165
-\MPnumerator=\count290
-\makeMPintoPDFobject=\count291
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count297
+\scratchdimen=\dimen185
+\scratchbox=\box60
+\nofMPsegments=\count298
+\nofMParguments=\count299
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count300
+\MPscratchDim=\dimen186
+\MPnumerator=\count301
+\makeMPintoPDFobject=\count302
+\everyMPtoPDFconversion=\toks31
 ) (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 11.
+Package hyperref Info: Link coloring OFF on input line 19.
  (index.out) (index.out)
 \@outlinefile=\write3
 \openout3 = `index.out'.
 
- (index.toc)
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (C:\Users\Michal\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) [1
+
+{C:/Users/Michal/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (index.toc)
 \tf@toc=\write4
 \openout4 = `index.toc'.
 
- [1
 
-{C:/Users/Michal/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (70.17699pt too wide) in paragraph at lines 42--43
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.38 \clearpage
+                % Start a new page after the ToC [1
+
+]
+Overfull \hbox (70.17699pt too wide) in paragraph at lines 67--68
 []\OT1/cmr/bx/n/10 Piano Tran-scrip-tion In-fer-ence: \OT1/cmr/m/n/10 A li-brary for tran-scrib-ing pi-ano mu-sic, used in \OT1/cmtt/m/n/10 transcription[]worker.py\OT1/cmr/m/n/10 . 
  []
 
 
-Overfull \hbox (15.00436pt too wide) in paragraph at lines 44--45
+Overfull \hbox (15.00436pt too wide) in paragraph at lines 69--70
 []\OT1/cmr/bx/n/10 MuseScore: \OT1/cmr/m/n/10 A soft-ware for cre-at-ing, play-ing, and print-ing sheet mu-sic, used in \OT1/cmtt/m/n/10 generate[]pdf.py
  []
 
-[2] [3]
-<../diagrams/use_case.png, id=124, 710.655pt x 554.07pt>
+[2
+
+] [3] [4
+
+]
+<../diagrams/use_case.png, id=195, 710.655pt x 554.07pt>
 File: ../diagrams/use_case.png Graphic file (type png)
 <use ../diagrams/use_case.png>
-Package pdftex.def Info: ../diagrams/use_case.png  used on input line 116.
-(pdftex.def)             Requested size: 344.005pt x 268.21635pt.
+Package pdftex.def Info: ../diagrams/use_case.png  used on input line 147.
+(pdftex.def)             Requested size: 430.00462pt x 335.26834pt.
+ [5
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.153 \clearpage
+                 <../diagrams/use_case.png>]
+<../diagrams/system_architecture.png, id=203, 888.31876pt x 559.08875pt>
+File: ../diagrams/system_architecture.png Graphic file (type png)
+<use ../diagrams/system_architecture.png>
+Package pdftex.def Info: ../diagrams/system_architecture.png  used on input line 157.
+(pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
+ [6
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../diagrams/class_diagram.png, id=126, 888.31876pt x 559.08875pt>
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.163 \clearpage
+                 <../diagrams/system_architecture.png>]
+<../diagrams/class_diagram.png, id=211, 888.31876pt x 559.08875pt>
 File: ../diagrams/class_diagram.png Graphic file (type png)
 <use ../diagrams/class_diagram.png>
-Package pdftex.def Info: ../diagrams/class_diagram.png  used on input line 132.
-(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
+Package pdftex.def Info: ../diagrams/class_diagram.png  used on input line 168.
+(pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
+ [7
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../diagrams/transcription_seq.png, id=127, 888.31876pt x 559.08875pt>
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.174 \clearpage
+                 <../diagrams/class_diagram.png>]
+<../diagrams/transcription_seq.png, id=218, 888.31876pt x 559.08875pt>
 File: ../diagrams/transcription_seq.png Graphic file (type png)
 <use ../diagrams/transcription_seq.png>
-Package pdftex.def Info: ../diagrams/transcription_seq.png  used on input line 141.
-(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../diagrams/audio_seq.png, id=128, 888.31876pt x 559.08875pt>
+Package pdftex.def Info: ../diagrams/transcription_seq.png  used on input line 180.
+(pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
+<../diagrams/audio_seq.png, id=219, 888.31876pt x 559.08875pt>
 File: ../diagrams/audio_seq.png Graphic file (type png)
 <use ../diagrams/audio_seq.png>
-Package pdftex.def Info: ../diagrams/audio_seq.png  used on input line 148.
-(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../diagrams/load_audio_seq.png, id=129, 888.31876pt x 559.08875pt>
+Package pdftex.def Info: ../diagrams/audio_seq.png  used on input line 187.
+(pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
+<../diagrams/load_audio_seq.png, id=220, 888.31876pt x 559.08875pt>
 File: ../diagrams/load_audio_seq.png Graphic file (type png)
 <use ../diagrams/load_audio_seq.png>
-Package pdftex.def Info: ../diagrams/load_audio_seq.png  used on input line 155.
-(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../diagrams/save_midi_seq.png, id=130, 888.31876pt x 559.08875pt>
+Package pdftex.def Info: ../diagrams/load_audio_seq.png  used on input line 194.
+(pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
+<../diagrams/save_midi_seq.png, id=221, 888.31876pt x 559.08875pt>
 File: ../diagrams/save_midi_seq.png Graphic file (type png)
 <use ../diagrams/save_midi_seq.png>
-Package pdftex.def Info: ../diagrams/save_midi_seq.png  used on input line 162.
-(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../diagrams/save_pdf_seq.png, id=131, 888.31876pt x 559.08875pt>
+Package pdftex.def Info: ../diagrams/save_midi_seq.png  used on input line 201.
+(pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
+<../diagrams/save_pdf_seq.png, id=222, 888.31876pt x 559.08875pt>
 File: ../diagrams/save_pdf_seq.png Graphic file (type png)
 <use ../diagrams/save_pdf_seq.png>
-Package pdftex.def Info: ../diagrams/save_pdf_seq.png  used on input line 169.
-(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
+Package pdftex.def Info: ../diagrams/save_pdf_seq.png  used on input line 208.
+(pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
+ [8
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../diagrams/ai_architecture.png, id=132, 888.31876pt x 559.08875pt>
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.213 \FloatBarrier
+                    <../diagrams/transcription_seq.png>] [9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.213 \FloatBarrier
+                    <../diagrams/audio_seq.png>] [10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.213 \FloatBarrier
+                    <../diagrams/load_audio_seq.png>] [11
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.213 \FloatBarrier
+                    <../diagrams/save_midi_seq.png>] [12
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.213 \FloatBarrier
+                    <../diagrams/save_pdf_seq.png>]
+<../diagrams/ai_architecture.png, id=254, 888.31876pt x 559.08875pt>
 File: ../diagrams/ai_architecture.png Graphic file (type png)
 <use ../diagrams/ai_architecture.png>
-Package pdftex.def Info: ../diagrams/ai_architecture.png  used on input line 178.
-(pdftex.def)             Requested size: 344.005pt x 216.50815pt.
+Package pdftex.def Info: ../diagrams/ai_architecture.png  used on input line 219.
+(pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
+ [13
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.229 \clearpage
+                 <../diagrams/ai_architecture.png>] [14
+
+]
+<../gen_notes/chopin.pdf, id=273, 597.23137pt x 845.1575pt>
+File: ../gen_notes/chopin.pdf Graphic file (type pdf)
+<use ../gen_notes/chopin.pdf>
+Package pdftex.def Info: ../gen_notes/chopin.pdf  used on input line 261.
+(pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
+File: ../gen_notes/chopin.pdf Graphic file (type pdf)
+<use ../gen_notes/chopin.pdf>
+Package pdftex.def Info: ../gen_notes/chopin.pdf  used on input line 261.
+(pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
+<../gen_notes/chopin.pdf, id=276, page=1, 597.23137pt x 845.1575pt>
+File: ../gen_notes/chopin.pdf Graphic file (type pdf)
+<use ../gen_notes/chopin.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 261.
+(pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
+File: ../gen_notes/chopin.pdf Graphic file (type pdf)
+<use ../gen_notes/chopin.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 261.
+(pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
+File: ../gen_notes/chopin.pdf Graphic file (type pdf)
+<use ../gen_notes/chopin.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 261.
+(pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
+File: ../gen_notes/chopin.pdf Graphic file (type pdf)
+<use ../gen_notes/chopin.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 261.
+(pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
+File: ../gen_notes/chopin.pdf Graphic file (type pdf)
+<use ../gen_notes/chopin.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 264.
+(pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
+ [15
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+ <../gen_notes/chopin.pdf>]
 
-[4] [5 <../diagrams/use_case.png>] [6 <../diagrams/class_diagram.png> <../diagrams/transcription_seq.png>] [7 <../diagrams/audio_seq.png> <../diagrams/load_audio_seq.png>] [8 <../diagrams/save_midi_seq.png> <../diagrams/save_pdf_seq.png>] [9 <../diagrams/ai_architecture.png>] (index.aux)
+pdfTeX warning: pdflatex (file ../gen_notes/Chopin_Op.10.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<../gen_notes/Chopin_Op.10.pdf, id=322, 481.43866pt x 649.94823pt>
+File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
+<use ../gen_notes/Chopin_Op.10.pdf>
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf  used on input line 267.
+(pdftex.def)             Requested size: 481.43748pt x 649.94664pt.
+
+
+pdfTeX warning: pdflatex (file ../gen_notes/Chopin_Op.10.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
+<use ../gen_notes/Chopin_Op.10.pdf>
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf  used on input line 267.
+(pdftex.def)             Requested size: 481.43748pt x 649.94664pt.
+
+
+pdfTeX warning: pdflatex (file ../gen_notes/Chopin_Op.10.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ../gen_notes/Chopin_Op.10.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<../gen_notes/Chopin_Op.10.pdf, id=325, page=22, 481.43866pt x 649.82777pt>
+File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
+<use ../gen_notes/Chopin_Op.10.pdf, page 22>
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 267.
+(pdftex.def)             Requested size: 481.43748pt x 649.82619pt.
+File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
+<use ../gen_notes/Chopin_Op.10.pdf, page 22>
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 267.
+(pdftex.def)             Requested size: 589.71977pt x 795.98154pt.
+File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
+<use ../gen_notes/Chopin_Op.10.pdf, page 22>
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 267.
+(pdftex.def)             Requested size: 589.71977pt x 795.98154pt.
+File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
+<use ../gen_notes/Chopin_Op.10.pdf, page 22>
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 267.
+(pdftex.def)             Requested size: 589.71977pt x 795.98154pt.
+File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
+<use ../gen_notes/Chopin_Op.10.pdf, page 22>
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 270.
+(pdftex.def)             Requested size: 589.71977pt x 795.98154pt.
+[16
+
+
+ <../gen_notes/Chopin_Op.10.pdf>]
+<../gen_notes/waldstein.pdf, id=332, 597.23137pt x 845.1575pt>
+File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein.pdf>
+Package pdftex.def Info: ../gen_notes/waldstein.pdf  used on input line 273.
+(pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
+File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein.pdf>
+Package pdftex.def Info: ../gen_notes/waldstein.pdf  used on input line 273.
+(pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
+<../gen_notes/waldstein.pdf, id=335, page=1, 597.23137pt x 845.1575pt>
+File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 273.
+(pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
+File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 273.
+(pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
+File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 273.
+(pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
+File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 273.
+(pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
+File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 276.
+(pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
+ [17
+
+
+ <../gen_notes/waldstein.pdf>]
+<../gen_notes/waldstein-1st-movement.pdf, id=381, 741.30951pt x 940.0199pt>
+File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein-1st-movement.pdf>
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf  used on input line 279.
+(pdftex.def)             Requested size: 741.30771pt x 940.01761pt.
+File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein-1st-movement.pdf>
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf  used on input line 279.
+(pdftex.def)             Requested size: 741.30771pt x 940.01761pt.
+<../gen_notes/waldstein-1st-movement.pdf, id=384, page=3, 741.45108pt x 940.29094pt>
+File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein-1st-movement.pdf, page 3>
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 279.
+(pdftex.def)             Requested size: 741.44926pt x 940.28865pt.
+File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein-1st-movement.pdf, page 3>
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 279.
+(pdftex.def)             Requested size: 614.65755pt x 779.49435pt.
+File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein-1st-movement.pdf, page 3>
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 279.
+(pdftex.def)             Requested size: 614.65755pt x 779.49435pt.
+File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein-1st-movement.pdf, page 3>
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 279.
+(pdftex.def)             Requested size: 614.65755pt x 779.49435pt.
+File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
+<use ../gen_notes/waldstein-1st-movement.pdf, page 3>
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 282.
+(pdftex.def)             Requested size: 614.65755pt x 779.49435pt.
+ [18
+
+
+ <../gen_notes/waldstein-1st-movement.pdf>]
+<../gen_notes/Adagio-cantabile.pdf, id=393, 597.23137pt x 845.1575pt>
+File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
+<use ../gen_notes/Adagio-cantabile.pdf>
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf  used on input line 285.
+(pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
+File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
+<use ../gen_notes/Adagio-cantabile.pdf>
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf  used on input line 285.
+(pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
+<../gen_notes/Adagio-cantabile.pdf, id=396, page=1, 597.23137pt x 845.1575pt>
+File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
+<use ../gen_notes/Adagio-cantabile.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 285.
+(pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
+File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
+<use ../gen_notes/Adagio-cantabile.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 285.
+(pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
+File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
+<use ../gen_notes/Adagio-cantabile.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 285.
+(pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
+File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
+<use ../gen_notes/Adagio-cantabile.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 285.
+(pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
+File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
+<use ../gen_notes/Adagio-cantabile.pdf, page 1>
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 288.
+(pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
+ [19
+
+
+ <../gen_notes/Adagio-cantabile.pdf>]
+<../gen_notes/Pathetique.pdf, id=436, 713.95535pt x 939.25305pt>
+File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
+<use ../gen_notes/Pathetique.pdf>
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf  used on input line 291.
+(pdftex.def)             Requested size: 713.9536pt x 939.25076pt.
+File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
+<use ../gen_notes/Pathetique.pdf>
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf  used on input line 291.
+(pdftex.def)             Requested size: 713.9536pt x 939.25076pt.
+<../gen_notes/Pathetique.pdf, id=439, page=8, 715.21507pt x 941.05882pt>
+File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
+<use ../gen_notes/Pathetique.pdf, page 8>
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 291.
+(pdftex.def)             Requested size: 715.21333pt x 941.05653pt.
+File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
+<use ../gen_notes/Pathetique.pdf, page 8>
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 291.
+(pdftex.def)             Requested size: 604.21426pt x 795.00723pt.
+File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
+<use ../gen_notes/Pathetique.pdf, page 8>
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 291.
+(pdftex.def)             Requested size: 604.21426pt x 795.00723pt.
+File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
+<use ../gen_notes/Pathetique.pdf, page 8>
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 291.
+(pdftex.def)             Requested size: 604.21426pt x 795.00723pt.
+File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
+<use ../gen_notes/Pathetique.pdf, page 8>
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 299.
+(pdftex.def)             Requested size: 604.21426pt x 795.00723pt.
+ [20
+
+
+ <../gen_notes/Pathetique.pdf>] [21
+
+] [22] (index.aux)
 Package rerunfilecheck Info: File `index.out' has not changed.
-(rerunfilecheck)             Checksum: AA2D5ABB2D78EE5E5CC33D171C2B72B7;3137.
+(rerunfilecheck)             Checksum: 414AB5B143E8A18270C4B6318633D2F1;5789.
  ) 
 Here is how much of TeX's memory you used:
- 9446 strings out of 475386
- 151159 string characters out of 5776435
- 504727 words of memory out of 5000000
- 30675 multiletter control sequences out of 15000+600000
- 475145 words of font info for 49 fonts, out of 8000000 for 9000
+ 12526 strings out of 475386
+ 206211 string characters out of 5776435
+ 557160 words of memory out of 5000000
+ 33634 multiletter control sequences out of 15000+600000
+ 472340 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,6n,77p,423b,506s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Michal\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on index.pdf (9 pages, 306046 bytes).
+ 72i,17n,77p,933b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Michal\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on index.pdf (23 pages, 988457 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 498 PDF objects out of 1000 (max. 8388607)
+ 66 named destinations out of 1000 (max. 500000)
+ 430 words of extra memory for PDF output out of 10000 (max. 10000000)
 
