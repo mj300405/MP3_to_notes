@@ -306,7 +306,7 @@ For the implementation of the application I encourage you to visit the GitHub re
 \clearpage
 \section{Results}
 
-The comparison of the generated and original sheet music shows that the application is able to accurately transcribe grand piano recordings into sheet music. The generated sheet music closely resembles the original sheet music in terms of notes and proportion of notes length. However, there are a lot of differences in used notation, measure, tempo.
+The comparison of the generated and original sheet music shows that the application is able to accurately transcribe grand piano recordings into sheet music. The generated sheet music closely resembles the original sheet music in terms of notes and proportion of notes length. However, there are a lot of differences in used notation, measure, tempo. The biggest problem is with grace notes, which are transcribed as regular notes, as well as measure. 
 
 Interestingly, the transcribed notes are more precise than original. What I mean by that is that AI can capture the exact note length played by the pianist. That is not always good, because the pianist can play the note a little bit longer or shorter than it is written in the sheet music. That results in darkened transcription because the model transcribes perfectly the note length.
 
@@ -318,7 +318,7 @@ The application successfully transcribes grand piano recordings into sheet music
 \FloatBarrier
 \section{Possible Improvements}
 \begin{itemize}
-    \item \textbf{Improved AI Model:} Developing second AI model that will be responsible for postprocessing the output of the first model. This model will be responsible for correcting the tempo, measure, and notation of the generated sheet music.
+    \item \textbf{Improved AI Model:} Developing second AI model that will be responsible for postprocessing the output of the first model. This model will be responsible for correcting the tempo, measure, and notation of the generated sheet music. I believe that it is possible to acchieve, because there are some dependencies between notes that can be used to correct the output.
     \item \textbf{Enhanced User Interface:} Adding more features to the user interface, such as real-time transcription visualization, audio waveform display, and interactive sheet music editing.
     \item \textbf{Additional Output Formats:} Supporting more output formats, such as MusicXML, MIDI, and audio files, to provide users with more options for sharing
     \item \textbf{Performance Optimization:} Optimizing the transcription process to reduce the time required for generating sheet music and improving the accuracy of the results.
