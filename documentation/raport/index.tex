@@ -33,6 +33,17 @@
 \tableofcontents
 \clearpage % Start a new page after the ToC
 
+\section{Motivation of the Project}
+
+The motivation behind this project includes:
+\begin{itemize}
+    \item \textbf{Problem-Solving:} Addressing the challenge of accurately transcribing complex piano music.
+    \item \textbf{Innovation:} Leveraging AI to create new tools for musicians and educators.
+    \item \textbf{Accessibility:} Making high-quality music transcription more accessible and convenient.
+    \item \textbf{Personal Interest:} A passion for music and technology, and the desire to combine these fields in a meaningful way.
+\end{itemize}
+
+
 \section{Topic Analysis}
 
 \subsection{Overview}
@@ -209,7 +220,20 @@ This project involves creating a desktop application designed to transcribe gran
 \FloatBarrier
 \clearpage
 
-\section{AI Model Architecture}
+\section{AI Model}
+The AI model implemented for this project is based on the architecture proposed by Kong et al. in "High-resolution Piano Transcription with Pedals by Regressing Precise Onsets and Offsets Times." This model is designed to achieve high accuracy in transcribing both notes and pedal actions from piano recordings.
+
+\subsection{Main Points of the AI Architecture}
+\begin{itemize}
+    \item \textbf{Input Features:} The input to the model is a log mel spectrogram of the audio recording, which provides a time-frequency representation of the sound.
+    \item \textbf{Convolutional Layers:} These layers extract high-level features from the log mel spectrogram, capturing the essential information required for accurate transcription.
+    \item \textbf{Bidirectional Gated Recurrent Units (biGRUs):} These layers model the temporal dependencies in the music, which are crucial for identifying the precise timing of notes and pedals.
+    \item \textbf{Regression and Classification Outputs:} The model predicts continuous onset and offset times, velocities for notes, and the presence of notes and pedals in each frame.
+\end{itemize}
+
+\subsection{AI Model Architecture}
+See Figure \ref{fig:ai_model_architecture} for the architecture of the AI model.
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{../diagrams/ai_architecture.png}
@@ -217,14 +241,76 @@ This project involves creating a desktop application designed to transcribe gran
     \label{fig:ai_model_architecture}
 \end{figure}
 
-\section{Code implementation}
+\subsection{Training Model}
 
-For the implementation of the application I encourage you to visit the GitHub repository: \href{https://github.com/mj300405/MP3_to_notes}{link to the repository}.
+The training process for the AI model involves several key steps to ensure high accuracy and robustness:
+
+\begin{itemize}
+    \item \textbf{Dataset:} The model was trained using the MAESTRO dataset, which contains high-quality piano recordings and corresponding MIDI files. This dataset is ideal due to its precision in time alignment.
+    \item \textbf{Preprocessing:} Audio recordings were converted to mono and resampled to 16 kHz. Log mel spectrograms were then extracted with a Hanning window and mel filter banks.
+    \item \textbf{Model Architecture:} The architecture includes convolutional blocks followed by biGRU layers. The convolutional layers help in extracting spatial features, while the biGRUs capture the temporal aspects of the music.
+    \item \textbf{Loss Functions:} Multiple loss functions were used to train the model, including binary cross-entropy for frame-wise classification and regression losses for onset and offset predictions.
+    \item \textbf{Training Procedure:} The model was trained using the Adam optimizer with a learning rate schedule. Dropout was used to prevent overfitting, and the model was trained for a large number of iterations to ensure convergence.
+    \item \textbf{Hardware:} Training was performed on Google Cloud Platform using NVIDIA Tesla V100 GPUs to accelerate the process, and to make it possible to train the model in a reasonable time frame.
+\end{itemize}
+
+\subsection{Accuracy of AI}
+
+The model achieved high accuracy in transcribing piano recordings:
+\begin{itemize}
+    \item \textbf{Onset F1 Score:} 96.72\% on the MAESTRO dataset, outperforming previous state-of-the-art models.
+    \item \textbf{Pedal Onset F1 Score:} 91.86\%, marking the first benchmark result for pedal transcription on this dataset.
+    \item \textbf{Robustness:} The model is robust to misalignments in the onset and offset labels, ensuring reliable performance even with noisy data.
+\end{itemize}
+
+
+
+
+\section{Implementation and Usage}
+
+For the implementation and usage of the application, I encourage you to visit the GitHub repository: \href{https://github.com/mj300405/MP3_to_notes}{link to the repository}. The repository contains:
+\begin{itemize}
+    \item \textbf{README File:} Detailed instructions on how to set up and run the application.
+    \item \textbf{Source Code:} All the necessary code files for the application, including:
+    \begin{itemize}
+        \item \textbf{audio\_processor.py:} Handles the preprocessing of audio recordings.
+        \item \textbf{transcription\_worker.py:} Uses the AI model to generate initial transcriptions.
+        \item \textbf{Sheet\_music\_generation.py:} Post-processes the AI model's output to create MIDI files.
+        \item \textbf{generate\_pdf.py:} Converts MIDI files into sheet music PDFs using the MuseScore API.
+        \item \textbf{window.py:} Provides the user interface for the application.
+        \item \textbf{requirements.txt:} Lists all the required Python libraries and their versions.
+        \item \textbf{AI Model:} Files related to model implementation, data preparation, training, evaluation, postprocessing, and inference.
+    \end{itemize}
+    \item \textbf{Commented Code:} The code is well-commented to facilitate understanding and further development.
+    \item \textbf{Sample Audio Files:} Included in the repository for testing the application (folder samples).
+\end{itemize}
+
 
 
 \clearpage
 \FloatBarrier
+\section{Motivations of Pieces Chosen}
+
+The pieces chosen for transcription were selected based on several factors:
+\begin{itemize}
+    \item \textbf{Complexity:} Pieces like Chopin's Etudes and Beethoven's Sonatas offer a wide range of technical challenges, making them ideal for testing the transcription capabilities of the AI model.
+    \item \textbf{Popularity:} These pieces are well-known and frequently studied, providing a good benchmark for comparison.
+    \item \textbf{Variety:} Including different styles and periods helps ensure the model is versatile and robust, allowing it to handle various musical textures and structures.
+    \item \textbf{Personal Experience:} I have personally played all of these pieces and am very familiar with them. This firsthand knowledge allows for a deeper understanding and more accurate evaluation of the transcription results.
+\end{itemize}
+
+
+
+% \clearpage
+% \FloatBarrier
 \section{Comparison of Generated and Original Sheet Music}
+
+The following sections provide a comparison of the generated sheet music with the original in terms of pitch. The generated sheet music is created by the AI model, while the original sheet music is the published version of the piece. Meaning of colors used in the generated sheet music:
+\begin{itemize}
+    \item \textbf{Red:} wrong note (in terms of pitch).
+    \item \textbf{Green:} correct melody (in terms of pitch).
+    \item \textbf{Blue:} correct accompaniament (in terms of pitch).
+\end{itemize}
 
 \subsection{F. Chopin - Etude op. 10 no. 5}
 

@@ -1,33 +1,39 @@
-\contentsline {section}{\numberline {1}Topic Analysis}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Overview}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Objectives}{2}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Key Components}{2}{subsection.1.3}%
-\contentsline {section}{\numberline {2}Technologies Used}{2}{section.2}%
-\contentsline {section}{\numberline {3}Functional Requirements}{3}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Core Functionalities}{3}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Non-Functional Requirements}{4}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Performance Requirements}{4}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Usability Requirements}{4}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Compatibility Requirements}{4}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Maintainability Requirements}{4}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Scalability Requirements}{4}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Use Case Diagram}{5}{section.5}%
-\contentsline {section}{\numberline {6}System Architecture Flow Chart}{6}{section.6}%
-\contentsline {section}{\numberline {7}Class Diagram}{7}{section.7}%
-\contentsline {section}{\numberline {8}Sequence Diagrams}{8}{section.8}%
-\contentsline {section}{\numberline {9}AI Model Architecture}{13}{section.9}%
-\contentsline {section}{\numberline {10}Code implementation}{13}{section.10}%
-\contentsline {section}{\numberline {11}Comparison of Generated and Original Sheet Music}{14}{section.11}%
-\contentsline {subsection}{\numberline {11.1}F. Chopin - Etude op. 10 no. 5}{14}{subsection.11.1}%
-\contentsline {subsubsection}{\numberline {11.1.1}Generated sheet music}{14}{subsubsection.11.1.1}%
-\contentsline {subsubsection}{\numberline {11.1.2}Original sheet music}{14}{subsubsection.11.1.2}%
-\contentsline {subsection}{\numberline {11.2}L. van Beethoven - Sonata op. 53 no. 21 "Waldstein", Allegro con brio}{14}{subsection.11.2}%
-\contentsline {subsubsection}{\numberline {11.2.1}Generated sheet music}{14}{subsubsection.11.2.1}%
-\contentsline {subsubsection}{\numberline {11.2.2}Original sheet music}{14}{subsubsection.11.2.2}%
-\contentsline {subsection}{\numberline {11.3}L. van Beethoven - Sonata op. 13 no. 8 "Pathetique", Adagio cantabile}{14}{subsection.11.3}%
-\contentsline {subsubsection}{\numberline {11.3.1}Generated sheet music}{14}{subsubsection.11.3.1}%
-\contentsline {subsubsection}{\numberline {11.3.2}Original sheet music}{14}{subsubsection.11.3.2}%
-\contentsline {section}{\numberline {12}Results}{21}{section.12}%
-\contentsline {section}{\numberline {13}Conclusion}{21}{section.13}%
-\contentsline {section}{\numberline {14}Possible Improvements}{21}{section.14}%
-\contentsline {section}{\numberline {15}References}{22}{section.15}%
+\contentsline {section}{\numberline {1}Motivation of the Project}{3}{section.1}%
+\contentsline {section}{\numberline {2}Topic Analysis}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Overview}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Objectives}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Key Components}{3}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Technologies Used}{3}{section.3}%
+\contentsline {section}{\numberline {4}Functional Requirements}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Core Functionalities}{4}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Non-Functional Requirements}{6}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Performance Requirements}{6}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Usability Requirements}{6}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Compatibility Requirements}{6}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Maintainability Requirements}{6}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Scalability Requirements}{6}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Use Case Diagram}{7}{section.6}%
+\contentsline {section}{\numberline {7}System Architecture Flow Chart}{8}{section.7}%
+\contentsline {section}{\numberline {8}Class Diagram}{9}{section.8}%
+\contentsline {section}{\numberline {9}Sequence Diagrams}{10}{section.9}%
+\contentsline {section}{\numberline {10}AI Model}{15}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Main Points of the AI Architecture}{15}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}AI Model Architecture}{15}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Training Model}{15}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Accuracy of AI}{17}{subsection.10.4}%
+\contentsline {section}{\numberline {11}Implementation and Usage}{17}{section.11}%
+\contentsline {section}{\numberline {12}Motivations of Pieces Chosen}{18}{section.12}%
+\contentsline {section}{\numberline {13}Comparison of Generated and Original Sheet Music}{18}{section.13}%
+\contentsline {subsection}{\numberline {13.1}F. Chopin - Etude op. 10 no. 5}{18}{subsection.13.1}%
+\contentsline {subsubsection}{\numberline {13.1.1}Generated sheet music}{18}{subsubsection.13.1.1}%
+\contentsline {subsubsection}{\numberline {13.1.2}Original sheet music}{18}{subsubsection.13.1.2}%
+\contentsline {subsection}{\numberline {13.2}L. van Beethoven - Sonata op. 53 no. 21 "Waldstein", Allegro con brio}{18}{subsection.13.2}%
+\contentsline {subsubsection}{\numberline {13.2.1}Generated sheet music}{18}{subsubsection.13.2.1}%
+\contentsline {subsubsection}{\numberline {13.2.2}Original sheet music}{18}{subsubsection.13.2.2}%
+\contentsline {subsection}{\numberline {13.3}L. van Beethoven - Sonata op. 13 no. 8 "Pathetique", Adagio cantabile}{19}{subsection.13.3}%
+\contentsline {subsubsection}{\numberline {13.3.1}Generated sheet music}{19}{subsubsection.13.3.1}%
+\contentsline {subsubsection}{\numberline {13.3.2}Original sheet music}{19}{subsubsection.13.3.2}%
+\contentsline {section}{\numberline {14}Results}{26}{section.14}%
+\contentsline {section}{\numberline {15}Conclusion}{26}{section.15}%
+\contentsline {section}{\numberline {16}Possible Improvements}{26}{section.16}%
+\contentsline {section}{\numberline {17}References}{27}{section.17}%

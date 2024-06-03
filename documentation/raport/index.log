@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.1)  3 JUN 2024 12:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.1)  3 JUN 2024 21:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -436,186 +436,186 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )) [1
 
-{C:/Users/Michal/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (index.toc)
-\tf@toc=\write4
-\openout4 = `index.toc'.
-
-
+{C:/Users/Michal/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (index.toc
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 \clearpage
-                % Start a new page after the ToC [1
+l.36 ...}{\numberline {14}Results}{26}{section.14}
+                                                  % [1
+
+])
+\tf@toc=\write4
+\openout4 = `index.toc'.
+
+ [2] [3
 
 ]
-Overfull \hbox (70.17699pt too wide) in paragraph at lines 63--64
+Overfull \hbox (70.17699pt too wide) in paragraph at lines 74--75
 []\OT1/cmr/bx/n/10 Piano Tran-scrip-tion In-fer-ence: \OT1/cmr/m/n/10 A li-brary for tran-scrib-ing pi-ano mu-sic, used in \OT1/cmtt/m/n/10 transcription[]worker.py\OT1/cmr/m/n/10 . 
  []
 
 
-Overfull \hbox (15.00436pt too wide) in paragraph at lines 65--66
+Overfull \hbox (15.00436pt too wide) in paragraph at lines 76--77
 []\OT1/cmr/bx/n/10 MuseScore: \OT1/cmr/m/n/10 A soft-ware for cre-at-ing, play-ing, and print-ing sheet mu-sic, used in \OT1/cmtt/m/n/10 generate[]pdf.py
  []
 
-[2
-
-] [3] [4
+[4] [5] [6
 
 ]
-<../diagrams/use_case.png, id=195, 710.655pt x 554.07pt>
+<../diagrams/use_case.png, id=234, 710.655pt x 554.07pt>
 File: ../diagrams/use_case.png Graphic file (type png)
 <use ../diagrams/use_case.png>
-Package pdftex.def Info: ../diagrams/use_case.png  used on input line 143.
+Package pdftex.def Info: ../diagrams/use_case.png  used on input line 154.
 (pdftex.def)             Requested size: 430.00462pt x 335.26834pt.
- [5
+ [7
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.149 \clearpage
+l.160 \clearpage
                  <../diagrams/use_case.png>]
-<../diagrams/system_architecture.png, id=203, 888.31876pt x 559.08875pt>
+<../diagrams/system_architecture.png, id=242, 888.31876pt x 559.08875pt>
 File: ../diagrams/system_architecture.png Graphic file (type png)
 <use ../diagrams/system_architecture.png>
-Package pdftex.def Info: ../diagrams/system_architecture.png  used on input line 153.
+Package pdftex.def Info: ../diagrams/system_architecture.png  used on input line 164.
 (pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
- [6
+ [8
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.159 \clearpage
+l.170 \clearpage
                  <../diagrams/system_architecture.png>]
-<../diagrams/class_diagram.png, id=211, 888.31876pt x 559.08875pt>
+<../diagrams/class_diagram.png, id=249, 888.31876pt x 559.08875pt>
 File: ../diagrams/class_diagram.png Graphic file (type png)
 <use ../diagrams/class_diagram.png>
-Package pdftex.def Info: ../diagrams/class_diagram.png  used on input line 164.
+Package pdftex.def Info: ../diagrams/class_diagram.png  used on input line 175.
 (pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
- [7
+ [9
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.170 \clearpage
+l.181 \clearpage
                  <../diagrams/class_diagram.png>]
-<../diagrams/transcription_seq.png, id=218, 888.31876pt x 559.08875pt>
+<../diagrams/transcription_seq.png, id=256, 888.31876pt x 559.08875pt>
 File: ../diagrams/transcription_seq.png Graphic file (type png)
 <use ../diagrams/transcription_seq.png>
-Package pdftex.def Info: ../diagrams/transcription_seq.png  used on input line 176.
+Package pdftex.def Info: ../diagrams/transcription_seq.png  used on input line 187.
 (pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
-<../diagrams/audio_seq.png, id=219, 888.31876pt x 559.08875pt>
+<../diagrams/audio_seq.png, id=257, 888.31876pt x 559.08875pt>
 File: ../diagrams/audio_seq.png Graphic file (type png)
 <use ../diagrams/audio_seq.png>
-Package pdftex.def Info: ../diagrams/audio_seq.png  used on input line 183.
+Package pdftex.def Info: ../diagrams/audio_seq.png  used on input line 194.
 (pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
-<../diagrams/load_audio_seq.png, id=220, 888.31876pt x 559.08875pt>
+<../diagrams/load_audio_seq.png, id=258, 888.31876pt x 559.08875pt>
 File: ../diagrams/load_audio_seq.png Graphic file (type png)
 <use ../diagrams/load_audio_seq.png>
-Package pdftex.def Info: ../diagrams/load_audio_seq.png  used on input line 190.
+Package pdftex.def Info: ../diagrams/load_audio_seq.png  used on input line 201.
 (pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
-<../diagrams/save_midi_seq.png, id=221, 888.31876pt x 559.08875pt>
+<../diagrams/save_midi_seq.png, id=259, 888.31876pt x 559.08875pt>
 File: ../diagrams/save_midi_seq.png Graphic file (type png)
 <use ../diagrams/save_midi_seq.png>
-Package pdftex.def Info: ../diagrams/save_midi_seq.png  used on input line 197.
+Package pdftex.def Info: ../diagrams/save_midi_seq.png  used on input line 208.
 (pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
-<../diagrams/save_pdf_seq.png, id=222, 888.31876pt x 559.08875pt>
+<../diagrams/save_pdf_seq.png, id=260, 888.31876pt x 559.08875pt>
 File: ../diagrams/save_pdf_seq.png Graphic file (type png)
 <use ../diagrams/save_pdf_seq.png>
-Package pdftex.def Info: ../diagrams/save_pdf_seq.png  used on input line 204.
+Package pdftex.def Info: ../diagrams/save_pdf_seq.png  used on input line 215.
 (pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
- [8
+ [10
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.209 \FloatBarrier
-                    <../diagrams/transcription_seq.png>] [9
+l.220 \FloatBarrier
+                    <../diagrams/transcription_seq.png>] [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.209 \FloatBarrier
-                    <../diagrams/audio_seq.png>] [10
+l.220 \FloatBarrier
+                    <../diagrams/audio_seq.png>] [12
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.209 \FloatBarrier
-                    <../diagrams/load_audio_seq.png>] [11
+l.220 \FloatBarrier
+                    <../diagrams/load_audio_seq.png>] [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.209 \FloatBarrier
-                    <../diagrams/save_midi_seq.png>] [12
+l.220 \FloatBarrier
+                    <../diagrams/save_midi_seq.png>] [14
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.209 \FloatBarrier
+l.220 \FloatBarrier
                     <../diagrams/save_pdf_seq.png>]
-<../diagrams/ai_architecture.png, id=254, 888.31876pt x 559.08875pt>
+<../diagrams/ai_architecture.png, id=293, 888.31876pt x 559.08875pt>
 File: ../diagrams/ai_architecture.png Graphic file (type png)
 <use ../diagrams/ai_architecture.png>
-Package pdftex.def Info: ../diagrams/ai_architecture.png  used on input line 215.
+Package pdftex.def Info: ../diagrams/ai_architecture.png  used on input line 239.
 (pdftex.def)             Requested size: 430.00462pt x 270.62878pt.
- [13
+ [15
 
-
+] [16
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.225 \clearpage
-                 <../diagrams/ai_architecture.png>] [14
+l.255 \end{itemize}
+                    <../diagrams/ai_architecture.png>] [17] [18
 
-]
-<../gen_notes/chopin.pdf, id=279, 597.23137pt x 845.1575pt>
+] [19]
+<../gen_notes/chopin.pdf, id=330, 597.23137pt x 845.1575pt>
 File: ../gen_notes/chopin.pdf Graphic file (type pdf)
 <use ../gen_notes/chopin.pdf>
-Package pdftex.def Info: ../gen_notes/chopin.pdf  used on input line 259.
+Package pdftex.def Info: ../gen_notes/chopin.pdf  used on input line 345.
 (pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
 File: ../gen_notes/chopin.pdf Graphic file (type pdf)
 <use ../gen_notes/chopin.pdf>
-Package pdftex.def Info: ../gen_notes/chopin.pdf  used on input line 259.
+Package pdftex.def Info: ../gen_notes/chopin.pdf  used on input line 345.
 (pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
-<../gen_notes/chopin.pdf, id=282, page=1, 597.23137pt x 845.1575pt>
+<../gen_notes/chopin.pdf, id=333, page=1, 597.23137pt x 845.1575pt>
 File: ../gen_notes/chopin.pdf Graphic file (type pdf)
 <use ../gen_notes/chopin.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 259.
+Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 345.
 (pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
 File: ../gen_notes/chopin.pdf Graphic file (type pdf)
 <use ../gen_notes/chopin.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 259.
+Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 345.
 (pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
 File: ../gen_notes/chopin.pdf Graphic file (type pdf)
 <use ../gen_notes/chopin.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 259.
+Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 345.
 (pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
 File: ../gen_notes/chopin.pdf Graphic file (type pdf)
 <use ../gen_notes/chopin.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 259.
+Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 345.
 (pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
 File: ../gen_notes/chopin.pdf Graphic file (type pdf)
 <use ../gen_notes/chopin.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 262.
+Package pdftex.def Info: ../gen_notes/chopin.pdf , page1 used on input line 348.
 (pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
- [15
+ [20
 
 
  <../gen_notes/chopin.pdf>]
 
 pdfTeX warning: pdflatex (file ../gen_notes/Chopin_Op.10.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../gen_notes/Chopin_Op.10.pdf, id=328, 481.43866pt x 649.94823pt>
+<../gen_notes/Chopin_Op.10.pdf, id=379, 481.43866pt x 649.94823pt>
 File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
 <use ../gen_notes/Chopin_Op.10.pdf>
-Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf  used on input line 267.
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf  used on input line 353.
 (pdftex.def)             Requested size: 481.43748pt x 649.94664pt.
 
 
 pdfTeX warning: pdflatex (file ../gen_notes/Chopin_Op.10.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
 File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
 <use ../gen_notes/Chopin_Op.10.pdf>
-Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf  used on input line 267.
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf  used on input line 353.
 (pdftex.def)             Requested size: 481.43748pt x 649.94664pt.
 
 
@@ -623,184 +623,184 @@ pdfTeX warning: pdflatex (file ../gen_notes/Chopin_Op.10.pdf): PDF inclusion: fo
 
 
 pdfTeX warning: pdflatex (file ../gen_notes/Chopin_Op.10.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<../gen_notes/Chopin_Op.10.pdf, id=331, page=22, 481.43866pt x 649.82777pt>
+<../gen_notes/Chopin_Op.10.pdf, id=382, page=22, 481.43866pt x 649.82777pt>
 File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
 <use ../gen_notes/Chopin_Op.10.pdf, page 22>
-Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 267.
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 353.
 (pdftex.def)             Requested size: 481.43748pt x 649.82619pt.
 File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
 <use ../gen_notes/Chopin_Op.10.pdf, page 22>
-Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 267.
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 353.
 (pdftex.def)             Requested size: 589.71977pt x 795.98154pt.
 File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
 <use ../gen_notes/Chopin_Op.10.pdf, page 22>
-Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 267.
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 353.
 (pdftex.def)             Requested size: 589.71977pt x 795.98154pt.
 File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
 <use ../gen_notes/Chopin_Op.10.pdf, page 22>
-Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 267.
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 353.
 (pdftex.def)             Requested size: 589.71977pt x 795.98154pt.
 File: ../gen_notes/Chopin_Op.10.pdf Graphic file (type pdf)
 <use ../gen_notes/Chopin_Op.10.pdf, page 22>
-Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 270.
+Package pdftex.def Info: ../gen_notes/Chopin_Op.10.pdf , page22 used on input line 356.
 (pdftex.def)             Requested size: 589.71977pt x 795.98154pt.
-[16
+[21
 
 
  <../gen_notes/Chopin_Op.10.pdf>]
-<../gen_notes/waldstein.pdf, id=338, 597.23137pt x 845.1575pt>
+<../gen_notes/waldstein.pdf, id=389, 597.23137pt x 845.1575pt>
 File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein.pdf>
-Package pdftex.def Info: ../gen_notes/waldstein.pdf  used on input line 275.
+Package pdftex.def Info: ../gen_notes/waldstein.pdf  used on input line 361.
 (pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
 File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein.pdf>
-Package pdftex.def Info: ../gen_notes/waldstein.pdf  used on input line 275.
+Package pdftex.def Info: ../gen_notes/waldstein.pdf  used on input line 361.
 (pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
-<../gen_notes/waldstein.pdf, id=341, page=1, 597.23137pt x 845.1575pt>
+<../gen_notes/waldstein.pdf, id=392, page=1, 597.23137pt x 845.1575pt>
 File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 275.
+Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 361.
 (pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
 File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 275.
+Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 361.
 (pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
 File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 275.
+Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 361.
 (pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
 File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 275.
+Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 361.
 (pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
 File: ../gen_notes/waldstein.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 278.
+Package pdftex.def Info: ../gen_notes/waldstein.pdf , page1 used on input line 364.
 (pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
- [17
+ [22
 
 
  <../gen_notes/waldstein.pdf>]
-<../gen_notes/waldstein-1st-movement.pdf, id=387, 741.30951pt x 940.0199pt>
+<../gen_notes/waldstein-1st-movement.pdf, id=438, 741.30951pt x 940.0199pt>
 File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein-1st-movement.pdf>
-Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf  used on input line 283.
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf  used on input line 369.
 (pdftex.def)             Requested size: 741.30771pt x 940.01761pt.
 File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein-1st-movement.pdf>
-Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf  used on input line 283.
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf  used on input line 369.
 (pdftex.def)             Requested size: 741.30771pt x 940.01761pt.
-<../gen_notes/waldstein-1st-movement.pdf, id=390, page=3, 741.45108pt x 940.29094pt>
+<../gen_notes/waldstein-1st-movement.pdf, id=441, page=3, 741.45108pt x 940.29094pt>
 File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein-1st-movement.pdf, page 3>
-Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 283.
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 369.
 (pdftex.def)             Requested size: 741.44926pt x 940.28865pt.
 File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein-1st-movement.pdf, page 3>
-Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 283.
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 369.
 (pdftex.def)             Requested size: 614.65755pt x 779.49435pt.
 File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein-1st-movement.pdf, page 3>
-Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 283.
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 369.
 (pdftex.def)             Requested size: 614.65755pt x 779.49435pt.
 File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein-1st-movement.pdf, page 3>
-Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 283.
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 369.
 (pdftex.def)             Requested size: 614.65755pt x 779.49435pt.
 File: ../gen_notes/waldstein-1st-movement.pdf Graphic file (type pdf)
 <use ../gen_notes/waldstein-1st-movement.pdf, page 3>
-Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 286.
+Package pdftex.def Info: ../gen_notes/waldstein-1st-movement.pdf , page3 used on input line 372.
 (pdftex.def)             Requested size: 614.65755pt x 779.49435pt.
- [18
+ [23
 
 
  <../gen_notes/waldstein-1st-movement.pdf>]
-<../gen_notes/Adagio-cantabile.pdf, id=399, 597.23137pt x 845.1575pt>
+<../gen_notes/Adagio-cantabile.pdf, id=449, 597.23137pt x 845.1575pt>
 File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
 <use ../gen_notes/Adagio-cantabile.pdf>
-Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf  used on input line 291.
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf  used on input line 377.
 (pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
 File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
 <use ../gen_notes/Adagio-cantabile.pdf>
-Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf  used on input line 291.
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf  used on input line 377.
 (pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
-<../gen_notes/Adagio-cantabile.pdf, id=402, page=1, 597.23137pt x 845.1575pt>
+<../gen_notes/Adagio-cantabile.pdf, id=452, page=1, 597.23137pt x 845.1575pt>
 File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
 <use ../gen_notes/Adagio-cantabile.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 291.
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 377.
 (pdftex.def)             Requested size: 597.2299pt x 845.15544pt.
 File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
 <use ../gen_notes/Adagio-cantabile.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 291.
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 377.
 (pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
 File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
 <use ../gen_notes/Adagio-cantabile.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 291.
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 377.
 (pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
 File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
 <use ../gen_notes/Adagio-cantabile.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 291.
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 377.
 (pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
 File: ../gen_notes/Adagio-cantabile.pdf Graphic file (type pdf)
 <use ../gen_notes/Adagio-cantabile.pdf, page 1>
-Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 294.
+Package pdftex.def Info: ../gen_notes/Adagio-cantabile.pdf , page1 used on input line 380.
 (pdftex.def)             Requested size: 561.86232pt x 795.10587pt.
- [19
+ [24
 
 
  <../gen_notes/Adagio-cantabile.pdf>]
-<../gen_notes/Pathetique.pdf, id=442, 713.95535pt x 939.25305pt>
+<../gen_notes/Pathetique.pdf, id=493, 713.95535pt x 939.25305pt>
 File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
 <use ../gen_notes/Pathetique.pdf>
-Package pdftex.def Info: ../gen_notes/Pathetique.pdf  used on input line 299.
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf  used on input line 385.
 (pdftex.def)             Requested size: 713.9536pt x 939.25076pt.
 File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
 <use ../gen_notes/Pathetique.pdf>
-Package pdftex.def Info: ../gen_notes/Pathetique.pdf  used on input line 299.
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf  used on input line 385.
 (pdftex.def)             Requested size: 713.9536pt x 939.25076pt.
-<../gen_notes/Pathetique.pdf, id=445, page=8, 715.21507pt x 941.05882pt>
+<../gen_notes/Pathetique.pdf, id=496, page=8, 715.21507pt x 941.05882pt>
 File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
 <use ../gen_notes/Pathetique.pdf, page 8>
-Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 299.
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 385.
 (pdftex.def)             Requested size: 715.21333pt x 941.05653pt.
 File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
 <use ../gen_notes/Pathetique.pdf, page 8>
-Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 299.
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 385.
 (pdftex.def)             Requested size: 604.21426pt x 795.00723pt.
 File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
 <use ../gen_notes/Pathetique.pdf, page 8>
-Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 299.
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 385.
 (pdftex.def)             Requested size: 604.21426pt x 795.00723pt.
 File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
 <use ../gen_notes/Pathetique.pdf, page 8>
-Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 299.
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 385.
 (pdftex.def)             Requested size: 604.21426pt x 795.00723pt.
 File: ../gen_notes/Pathetique.pdf Graphic file (type pdf)
 <use ../gen_notes/Pathetique.pdf, page 8>
-Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 306.
+Package pdftex.def Info: ../gen_notes/Pathetique.pdf , page8 used on input line 392.
 (pdftex.def)             Requested size: 604.21426pt x 795.00723pt.
- [20
+ [25
 
 
- <../gen_notes/Pathetique.pdf>] [21
+ <../gen_notes/Pathetique.pdf>] [26
 
-] [22] (index.aux)
+] [27] (index.aux)
 Package rerunfilecheck Info: File `index.out' has not changed.
-(rerunfilecheck)             Checksum: 414AB5B143E8A18270C4B6318633D2F1;5789.
+(rerunfilecheck)             Checksum: 1A74D709A0C048E7D5256CA4F2C68AD3;6807.
  ) 
 Here is how much of TeX's memory you used:
- 12532 strings out of 475386
- 206271 string characters out of 5776435
- 557040 words of memory out of 5000000
- 33634 multiletter control sequences out of 15000+600000
+ 12549 strings out of 475386
+ 206478 string characters out of 5776435
+ 558045 words of memory out of 5000000
+ 33640 multiletter control sequences out of 15000+600000
  472340 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,17n,77p,933b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,17n,77p,933b,551s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Michal\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on index.pdf (23 pages, 988950 bytes).
+Output written on index.pdf (28 pages, 1002892 bytes).
 PDF statistics:
- 505 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
- 430 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 559 PDF objects out of 1000 (max. 8388607)
+ 83 named destinations out of 1000 (max. 500000)
+ 478 words of extra memory for PDF output out of 10000 (max. 10000000)
 
